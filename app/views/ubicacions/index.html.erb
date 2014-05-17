@@ -1,0 +1,31 @@
+<h1>Listing ubicacions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Provincia</th>
+      <th>Canton</th>
+      <th>Distrito</th>
+      <th>Señas</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ubicacions.each do |ubicacion| %>
+      <tr>
+        <td><%= ubicacion.provincia_id %></td>
+        <td><%= ubicacion.canton_id %></td>
+        <td><%= ubicacion.distrito_id %></td>
+        <td><%= ubicacion.señas %></td>
+        <td><%= link_to 'Show', ubicacion %></td>
+        <td><%= link_to 'Edit', edit_ubicacion_path(ubicacion) %></td>
+        <td><%= link_to 'Destroy', ubicacion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ubicacion', new_ubicacion_path %>

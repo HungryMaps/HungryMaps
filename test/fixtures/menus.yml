@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  restaurante_id: 1
+  nombre_platillo: MyString
+  precio: 1.5
+  categoria_id: 1
+
+two:
+  restaurante_id: 1
+  nombre_platillo: MyString
+  precio: 1.5
+  categoria_id: 1

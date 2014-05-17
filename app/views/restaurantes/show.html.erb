@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre restaurante:</strong>
+  <%= @restaurante.nombre_restaurante %>
+</p>
+
+<p>
+  <strong>Tipo comida:</strong>
+  <%= @restaurante.tipo_comida_id %>
+</p>
+
+<p>
+  <strong>Menu:</strong>
+  <% @restaurante.menus.each do |m| %>
+  <%= m.nombre_platillo %>
+  <%= m.precio %>
+  <% end %>
+</p>
+
+<%= link_to 'Edit', edit_restaurante_path(@restaurante) %> |
+<%= link_to 'Back', restaurantes_path %>

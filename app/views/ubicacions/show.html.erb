@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Provincia:</strong>
+  <%= @ubicacion.provincia_id %>
+</p>
+
+<p>
+  <strong>Canton:</strong>
+  <%= @ubicacion.canton_id %>
+</p>
+
+<p>
+  <strong>Distrito:</strong>
+  <%= @ubicacion.distrito_id %>
+</p>
+
+<p>
+  <strong>Señas:</strong>
+  <%= @ubicacion.señas %>
+</p>
+
+<%= link_to 'Edit', edit_ubicacion_path(@ubicacion) %> |
+<%= link_to 'Back', ubicacions_path %>

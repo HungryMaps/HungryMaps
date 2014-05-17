@@ -1,0 +1,27 @@
+<h1>Listing cantons</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre canton</th>
+      <th>Provincia</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cantons.each do |canton| %>
+      <tr>
+        <td><%= canton.nombre_canton %></td>
+        <td><%= canton.provincia_id %></td>
+        <td><%= link_to 'Show', canton %></td>
+        <td><%= link_to 'Edit', edit_canton_path(canton) %></td>
+        <td><%= link_to 'Destroy', canton, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Canton', new_canton_path %>
