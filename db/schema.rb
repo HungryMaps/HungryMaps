@@ -11,25 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140510232125) do
+ActiveRecord::Schema.define(version: 20140517212822) do
 
   create_table "cantons", force: true do |t|
     t.string   "nombre_canton"
-    t.integer  "provincia_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "destroys", force: true do |t|
-    t.string   "Direccion"
+    t.integer  "provin_id"
+    t.integer  "direccion_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "direccions", force: true do |t|
-    t.string   "provincia"
-    t.string   "canton"
-    t.string   "distrito"
+    t.integer  "restaurante_id"
+    t.string   "señas"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -37,6 +31,7 @@ ActiveRecord::Schema.define(version: 20140510232125) do
   create_table "distritos", force: true do |t|
     t.string   "nombre_distrito"
     t.integer  "canton_id"
+    t.integer  "direccion_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -50,8 +45,9 @@ ActiveRecord::Schema.define(version: 20140510232125) do
     t.datetime "updated_at"
   end
 
-  create_table "provincia", force: true do |t|
+  create_table "provins", force: true do |t|
     t.string   "nombre_provincia"
+    t.integer  "direccion_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -59,16 +55,6 @@ ActiveRecord::Schema.define(version: 20140510232125) do
   create_table "restaurantes", force: true do |t|
     t.string   "nombre_restaurante"
     t.integer  "tipo_comida_id"
-    t.integer  "direccion_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "ubicacions", force: true do |t|
-    t.integer  "provincia_id"
-    t.integer  "canton_id"
-    t.integer  "distrito_id"
-    t.string   "señas"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,0 +1,2 @@
+class Provin < ActiveRecord::Base
+end

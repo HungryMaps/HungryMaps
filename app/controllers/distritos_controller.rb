@@ -69,6 +69,6 @@ class DistritosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def distrito_params
-      params.require(:distrito).permit(:nombre_distrito, :canton_id)
+      params.require(:distrito).permit(:nombre_distrito, :canton_id, :direccion_id)
     end
 end

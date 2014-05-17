@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre restaurante:</strong>
+  <%= @restaurante.nombre_restaurante %>
+</p>
+
+<p>
+  <strong>Direccion: </strong>
+  <% @restaurante.direccions.each do |d| %>
+  <%= d.provin.nombre_provin %>
+  <%= d.canton.nombre_canton %>
+  <%= d.distrito.nombre_distrito %>
+  <% end %>
+</p>
+  
+<%= link_to 'Edit', edit_restaurante_path(@restaurante) %> |
+<%= link_to 'Back', restaurantes_path %>

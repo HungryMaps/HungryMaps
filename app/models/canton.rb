@@ -1,5 +1,4 @@
 class Canton < ActiveRecord::Base
-  belongs_to :provincia
-  belongs_to :ubicacion
-  has_many :distritos
+	belongs_to :provin
+	belongs_to :direccion
 end

@@ -1,1 +1,1 @@
-json.extract! @distrito, :id, :nombre_distrito, :canton_id, :created_at, :updated_at
+json.extract! @distrito, :id, :nombre_distrito, :canton_id, :direccion_id, :created_at, :updated_at

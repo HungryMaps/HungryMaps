@@ -69,6 +69,6 @@ class CantonsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def canton_params
-      params.require(:canton).permit(:nombre_canton, :provincia_id)
+      params.require(:canton).permit(:nombre_canton, :provin_id, :direccion_id)
     end
 end

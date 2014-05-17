@@ -3,7 +3,9 @@
 one:
   nombre_distrito: MyString
   canton_id: 1
+  direccion_id: 1
 
 two:
   nombre_distrito: MyString
   canton_id: 1
+  direccion_id: 1

@@ -1,4 +1,4 @@
 class Distrito < ActiveRecord::Base
-  belongs_to :ubicacion
-  belongs_to :cantones
+	belongs_to :canton
+	belongs_to :direccion
 end

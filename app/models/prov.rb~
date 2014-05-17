@@ -1,0 +1,4 @@
+class Prov < ActiveRecord::Base
+	has_many :cants
+	belongs_to :ubicacion
+end

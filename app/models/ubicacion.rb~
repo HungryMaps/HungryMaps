@@ -1,0 +1,6 @@
+class Ubicacion < ActiveRecord::Base
+  has_many :provins
+  has_many :cants, through: :provs
+  has_many :distrito, through: :cants
+  belongs_to :restaurante
+end

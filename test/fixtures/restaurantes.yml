@@ -3,9 +3,7 @@
 one:
   nombre_restaurante: MyString
   tipo_comida_id: 1
-  direccion_id: 1
 
 two:
   nombre_restaurante: MyString
   tipo_comida_id: 1
-  direccion_id: 1

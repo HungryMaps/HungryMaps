@@ -2,8 +2,10 @@
 
 one:
   nombre_canton: MyString
-  provincia_id: 1
+  provin_id: 1
+  direccion_id: 1
 
 two:
   nombre_canton: MyString
-  provincia_id: 1
+  provin_id: 1
+  direccion_id: 1

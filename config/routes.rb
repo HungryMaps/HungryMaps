@@ -1,17 +1,15 @@
 Rails.application.routes.draw do
+  resources :provins
+
+  resources :restaurantes
+
   resources :distritos
 
   resources :cantons
 
-  resources :provincia
-
-  resources :ubicacions
-
   resources :direccions
 
   resources :menus
-
-  resources :restaurantes
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
