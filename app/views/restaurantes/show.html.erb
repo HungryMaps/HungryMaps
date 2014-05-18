@@ -15,6 +15,13 @@
 </p>
 
 <p>
+  <strong>telefono: </strong>
+  <% @restaurante.telefonos.each do |t| %>
+  <%= t.telefono %>
+  <% end %>
+</p>
+
+<p>
   <strong>Menu:</strong>
   <%= link_to 'Vea El Menu', rest_menus_path%>
 </p>
