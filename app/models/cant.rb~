@@ -1,4 +1,0 @@
-class Cant < ActiveRecord::Base
-	has_many :distrs
-	belongs_to :prov
-end

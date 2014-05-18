@@ -15,10 +15,8 @@
 </p>
 
 <p>
-  <strong>telefono: </strong>
-  <% @restaurante.telefonos.each do |t| %>
-  <%= t.telefono %>
-  <% end %>
+  <strong>Tipo de Comida:</strong>
+  <%= @restaurante.tipo_comida %>
 </p>
 
 <p>

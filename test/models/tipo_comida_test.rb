@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class TelefonoTest < ActiveSupport::TestCase
+class TipoComidaTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
