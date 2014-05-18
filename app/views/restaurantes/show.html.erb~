@@ -8,11 +8,16 @@
 <p>
   <strong>Direccion: </strong>
   <% @restaurante.direccions.each do |d| %>
-  <%= d.provin.nombre_provin %>
+  <%= d.provin.nombre_provincia %>
   <%= d.canton.nombre_canton %>
   <%= d.distrito.nombre_distrito %>
   <% end %>
 </p>
+
+<p>
+  <strong>Menu:</strong>
+  <%= link_to 'Vea El Menu', rest_menus%>
+</p>
   
-<%= link_to 'Edit', edit_restaurante_path(@restaurante) %> |
-<%= link_to 'Back', restaurantes_path %>
+<%= link_to 'Editar', edit_restaurante_path(@restaurante) %> |
+<%= link_to 'Volver', restaurantes_path %>

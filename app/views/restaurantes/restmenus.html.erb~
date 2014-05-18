@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Menus: </strong>
+  <% @restaurante.menus.each do |m| %>
+  <%= m.nombre_platillo %>
+  <%= m.precio %> <br>
+  <% end %>
+</p>

@@ -7,7 +7,7 @@
 
 <p>
   <strong>Provin:</strong>
-  <%= @canton.provin.nombre_provincia %>
+  <%= @canton.provin_id %>
 </p>
 
 <p>
