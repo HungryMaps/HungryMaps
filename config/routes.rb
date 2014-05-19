@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :tipo_comidas
+  resources :usuarios
 
   resources :provins
 
@@ -12,7 +12,10 @@ Rails.application.routes.draw do
   resources :direccions
 
   resources :menus
-
+   
+  resources :usuario_sessions
+  match 'login' => 'usuario_sessions#new', as: :login
+  match 'logout' => 'usuario_sessions#destroy', as: :logout
   get '/restaurantes/:id/menus' => 'restaurantes#restmenus', as: 'rest_menus'  
 
   # The priority is based upon order of creation: first created -> highest priority.
