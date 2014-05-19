@@ -15,7 +15,7 @@
 </p>
 
 <p>
-  <strong>Telefono: </strong>
+  <strong>telefono: </strong>
   <% @restaurante.telefonos.each do |t| %>
   <%= t.telefono %>
   <% end %>

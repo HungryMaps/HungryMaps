@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Restaurante:</strong>
+  <%= @tipocomida.restaurante_id %>
+</p>
+
+<p>
+  <strong>Tipocomida:</strong>
+  <%= @tipocomida.tipocomida %>
+</p>
+
+<%= link_to 'Edit', edit_tipocomida_path(@tipocomida) %> |
+<%= link_to 'Back', tipocomidas_path %>

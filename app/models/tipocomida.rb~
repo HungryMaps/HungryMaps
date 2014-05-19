@@ -1,0 +1,2 @@
+class Tipocomida < ActiveRecord::Base
+end

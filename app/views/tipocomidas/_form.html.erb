@@ -1,0 +1,25 @@
+<%= form_for(@tipocomida) do |f| %>
+  <% if @tipocomida.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tipocomida.errors.count, "error") %> prohibited this tipocomida from being saved:</h2>
+
+      <ul>
+      <% @tipocomida.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :restaurante_id %><br>
+    <%= f.text_field :restaurante_id %>
+  </div>
+  <div class="field">
+    <%= f.label :tipocomida %><br>
+    <%= f.text_field :tipocomida %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
