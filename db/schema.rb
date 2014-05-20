@@ -11,12 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140520020558) do
+ActiveRecord::Schema.define(version: 20140520042631) do
 
   create_table "cantons", force: true do |t|
     t.string   "nombre_canton"
     t.integer  "provin_id"
     t.integer  "direccion_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "categors", force: true do |t|
+    t.string   "nombre_categoria"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -40,9 +46,9 @@ ActiveRecord::Schema.define(version: 20140520020558) do
     t.integer  "restaurante_id"
     t.string   "nombre_platillo"
     t.float    "precio"
-    t.integer  "categoria_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "categor_id"
   end
 
   create_table "provins", force: true do |t|

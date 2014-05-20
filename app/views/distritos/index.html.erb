@@ -1,4 +1,4 @@
-<h1>Listing distritos</h1>
+<h1>Listado distritos</h1>
 
 <table>
   <thead>
@@ -16,9 +16,9 @@
         <td><%= distrito.nombre_distrito %></td>
         <td><%= distrito.canton_id %></td>
         <td><%= distrito.direccion_id %></td>
-        <td><%= link_to 'Show', distrito %></td>
-        <td><%= link_to 'Edit', edit_distrito_path(distrito) %></td>
-        <td><%= link_to 'Destroy', distrito, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', distrito %></td>
+        <td><%= link_to 'Editar', edit_distrito_path(distrito) %></td>
+        <td><%= link_to 'Destruir', distrito, method: :delete, data: { confirm: '¿Está Seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Distrito', new_distrito_path %>
+<%= link_to 'Nuevo Distrito', new_distrito_path %>

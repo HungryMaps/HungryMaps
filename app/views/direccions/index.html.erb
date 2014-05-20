@@ -1,4 +1,4 @@
-<h1>Listing direccions</h1>
+<h1>Listado direcciones</h1>
 
 <table>
   <thead>
@@ -14,9 +14,9 @@
       <tr>
         <td><%= direccion.restaurante_id %></td>
         <td><%= direccion.señas %></td>
-        <td><%= link_to 'Show', direccion %></td>
-        <td><%= link_to 'Edit', edit_direccion_path(direccion) %></td>
-        <td><%= link_to 'Destroy', direccion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', direccion %></td>
+        <td><%= link_to 'Editar', edit_direccion_path(direccion) %></td>
+        <td><%= link_to 'Destruir', direccion, method: :delete, data: { confirm: '¿Está Seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +24,4 @@
 
 <br>
 
-<%= link_to 'New Direccion', new_direccion_path %>
+<%= link_to 'Nueva Direccion', new_direccion_path %>

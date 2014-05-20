@@ -1,4 +1,4 @@
-<h1>Listing tipocomidas</h1>
+<h1>Listando tipo comidas</h1>
 
 <table>
   <thead>
@@ -14,9 +14,9 @@
       <tr>
         <td><%= tipocomida.restaurante_id %></td>
         <td><%= tipocomida.tipocomida %></td>
-        <td><%= link_to 'Show', tipocomida %></td>
-        <td><%= link_to 'Edit', edit_tipocomida_path(tipocomida) %></td>
-        <td><%= link_to 'Destroy', tipocomida, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', tipocomida %></td>
+        <td><%= link_to 'Editar', edit_tipocomida_path(tipocomida) %></td>
+        <td><%= link_to 'Destruir', tipocomida, method: :delete, data: { confirm: '¿Está Seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +24,4 @@
 
 <br>
 
-<%= link_to 'New Tipocomida', new_tipocomida_path %>
+<%= link_to 'Nuevo Tipo De Comida', new_tipocomida_path %>

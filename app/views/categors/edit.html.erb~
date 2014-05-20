@@ -1,0 +1,6 @@
+<h1>Editing categor</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Mostrar', @categor %> |
+<%= link_to 'Volver', categors_path %>

@@ -1,4 +1,4 @@
-<h1>Listing provins</h1>
+<h1>Listando provincias</h1>
 
 <table>
   <thead>
@@ -14,9 +14,9 @@
       <tr>
         <td><%= provin.nombre_provincia %></td>
         <td><%= provin.direccion_id %></td>
-        <td><%= link_to 'Show', provin %></td>
-        <td><%= link_to 'Edit', edit_provin_path(provin) %></td>
-        <td><%= link_to 'Destroy', provin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', provin %></td>
+        <td><%= link_to 'Editar', edit_provin_path(provin) %></td>
+        <td><%= link_to 'Destruir', provin, method: :delete, data: { confirm: '¿Está Seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +24,4 @@
 
 <br>
 
-<%= link_to 'New Provin', new_provin_path %>
+<%= link_to 'Nueva Provincia', new_provin_path %>

@@ -1,0 +1,31 @@
+<h1>Listado menus</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Restaurante</th>
+      <th>Nombre platillo</th>
+      <th>Precio</th>
+      <th>Categoria</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @menus.each do |menu| %>
+      <tr>
+        <td><%= menu.restaurante_id %></td>
+        <td><%= menu.nombre_platillo %></td>
+        <td><%= menu.precio %></td>
+        <td><%= menu.categoria_id %></td>
+        <td><%= link_to 'Mostrar', menu %></td>
+        <td><%= link_to 'Editar', edit_menu_path(menu) %></td>
+        <td><%= link_to 'Destruir', menu, method: :delete, data: { confirm: '¿Está Seguro?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nuevo Menu', new_menu_path %>

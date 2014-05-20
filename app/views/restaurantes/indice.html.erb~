@@ -1,0 +1,10 @@
+<h1> Lista Tablas </h1>
+<%= link_to 'Restaurantes', restaurantes_path %>
+<%= link_to 'Cantones', cantons_path %>
+<%= link_to 'Distritos', distritos_path %>
+<%= link_to 'Provincias', provins_path %>
+<%= link_to 'Categorias', categors_path %>
+<%= link_to 'Tipos de Comida', tipocomidas_path %>
+<%= link_to 'Menus', menus_path %>
+<%= link_to 'Direcciones', direccions_path %>
+<%= link_to 'Telefonos', telefonos_path %>

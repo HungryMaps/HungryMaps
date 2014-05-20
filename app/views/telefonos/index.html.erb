@@ -1,4 +1,4 @@
-<h1>Listing telefonos</h1>
+<h1>Listando telefonos</h1>
 
 <table>
   <thead>
@@ -14,9 +14,9 @@
       <tr>
         <td><%= telefono.restaurante_id %></td>
         <td><%= telefono.telefono %></td>
-        <td><%= link_to 'Show', telefono %></td>
-        <td><%= link_to 'Edit', edit_telefono_path(telefono) %></td>
-        <td><%= link_to 'Destroy', telefono, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', telefono %></td>
+        <td><%= link_to 'Editar', edit_telefono_path(telefono) %></td>
+        <td><%= link_to 'Destruir', telefono, method: :delete, data: { confirm: '¿Está Seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +24,4 @@
 
 <br>
 
-<%= link_to 'New Telefono', new_telefono_path %>
+<%= link_to 'Nuevo Telefono', new_telefono_path %>

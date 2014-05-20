@@ -1,4 +1,4 @@
-<h1>Listing menus</h1>
+<h1>Listado menus</h1>
 
 <table>
   <thead>
@@ -17,10 +17,10 @@
         <td><%= menu.restaurante_id %></td>
         <td><%= menu.nombre_platillo %></td>
         <td><%= menu.precio %></td>
-        <td><%= menu.categoria_id %></td>
-        <td><%= link_to 'Show', menu %></td>
-        <td><%= link_to 'Edit', edit_menu_path(menu) %></td>
-        <td><%= link_to 'Destroy', menu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= menu.categor_id %></td>
+        <td><%= link_to 'Mostrar', menu %></td>
+        <td><%= link_to 'Editar', edit_menu_path(menu) %></td>
+        <td><%= link_to 'Destruir', menu, method: :delete, data: { confirm: '¿Está Seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Menu', new_menu_path %>
+<%= link_to 'Nuevo Menu', new_menu_path %>

@@ -2,7 +2,9 @@ class RestaurantesController < ApplicationController
   before_action :set_restaurante, only: [:show, :edit, :update, :destroy, :restmenus]
 
   def restmenus
-	#render 'show'
+  end
+
+  def indice
   end
 
   # GET /restaurantes
