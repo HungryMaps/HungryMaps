@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140519053312) do
+ActiveRecord::Schema.define(version: 20140520020558) do
 
   create_table "cantons", force: true do |t|
     t.string   "nombre_canton"
@@ -54,7 +54,6 @@ ActiveRecord::Schema.define(version: 20140519053312) do
 
   create_table "restaurantes", force: true do |t|
     t.string   "nombre_restaurante"
-    t.integer  "tipo_comida_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
