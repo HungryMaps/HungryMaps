@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  menu_id: MyString
+  energia: 1.5
+  grasas: 1.5
+  hidratos: 1.5
+  proteinas: 1.5
+  sal: 1.5
+
+two:
+  menu_id: MyString
+  energia: 1.5
+  grasas: 1.5
+  hidratos: 1.5
+  proteinas: 1.5
+  sal: 1.5

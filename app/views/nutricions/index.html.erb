@@ -1,0 +1,35 @@
+<h1>Lista de Información Nutricional</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Menu</th>
+      <th>Energia</th>
+      <th>Grasas</th>
+      <th>Hidratos</th>
+      <th>Proteinas</th>
+      <th>Sal</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @nutricions.each do |nutricion| %>
+      <tr>
+        <td><%= nutricion.menu_id %></td>
+        <td><%= nutricion.energia %></td>
+        <td><%= nutricion.grasas %></td>
+        <td><%= nutricion.hidratos %></td>
+        <td><%= nutricion.proteinas %></td>
+        <td><%= nutricion.sal %></td>
+        <td><%= link_to 'Mostrar', nutricion %></td>
+        <td><%= link_to 'Editar', edit_nutricion_path(nutricion) %></td>
+        <td><%= link_to 'Destruir', nutricion, method: :delete, data: { confirm: '¿Está seguro?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nueva Informacion Nutricional', new_nutricion_path %>

@@ -1,9 +1,6 @@
-<body style="background-color:FCFDC5;">
-<h1 style="font-family:arial; text-align:center; color:A03719">Listando Cantones</h1>
-</body>
-<br>
-<center>
-<table style="width:300px; text-allign=center;">
+<h1>Listando cantones</h1>
+
+<table>
   <thead>
     <tr>
       <th>Nombre canton</th>
@@ -21,15 +18,12 @@
         <td><%= canton.direccion_id %></td>
         <td><%= link_to 'Mostrar', canton %></td>
         <td><%= link_to 'Editar', edit_canton_path(canton) %></td>
-        <td><%= link_to 'Eliminar', canton, method: :delete, data: { confirm: 'Está seguro?' } %></td>
+        <td><%= link_to 'Destruir', canton, method: :delete, data: { confirm: 'Está seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-</center>
-<center>
-<%= link_to 'Inicio', indice_path %>
+
 <%= link_to 'Nuevo Canton', new_canton_path %>
-</center>

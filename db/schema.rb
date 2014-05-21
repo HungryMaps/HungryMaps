@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140520042631) do
+ActiveRecord::Schema.define(version: 20140521030804) do
 
   create_table "cantons", force: true do |t|
     t.string   "nombre_canton"
@@ -49,6 +49,17 @@ ActiveRecord::Schema.define(version: 20140520042631) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "categor_id"
+  end
+
+  create_table "nutricions", force: true do |t|
+    t.string   "menu_id"
+    t.float    "energia"
+    t.float    "grasas"
+    t.float    "hidratos"
+    t.float    "proteinas"
+    t.float    "sal"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "provins", force: true do |t|
