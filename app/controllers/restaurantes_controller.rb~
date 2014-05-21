@@ -2,13 +2,28 @@ class RestaurantesController < ApplicationController
   before_action :set_restaurante, only: [:show, :edit, :update, :destroy, :restmenus]
 
   def restmenus
-	#render 'show'
   end
+
+  def indice
+  end
+
 
   # GET /restaurantes
   # GET /restaurantes.json
-  def index
+  def index2
     @restaurantes = Restaurante.all
+   
+  end
+
+def index
+  @restaurantes = Restaurante.search(params[:searchbox])
+
+    respond_to do |format|
+
+      format.html # index.html.erb
+
+    end
+
   end
 
   # GET /restaurantes/1

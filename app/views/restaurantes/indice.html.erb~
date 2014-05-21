@@ -42,7 +42,3 @@
 <%= link_to 'Telefonos', telefonos_path %> <br>
 </h2>
 
-<h2 style="text-align:center;" > 
-<%= link_to 'Información Nutricional', nutricions_path %> <br>
-</h2>
-

@@ -2,18 +2,9 @@
 <h1 style="font-family:arial; text-align:center; color:A03719"> Lista De Restaurantes</h1>
 </body>
 
-
-
 <br>
 
 <center>
-<%= form_tag({:controller => "restaurantes", :action => "index"}, :method => :get) do %>
-
-    <%= text_field_tag "searchbox", params[:searchbox] %>
-
-    <%= submit_tag "Buscar", :nombre_restaurante => nil %>
-
-<% end %>
 <table style="width:300px; text-allign=center;">
   <thead>
     <tr>
@@ -39,5 +30,3 @@
 <%= link_to 'Inicio', indice_path %>
 <%= link_to 'Nuevo Restaurante', new_restaurante_path %>
 </center>
-
-
