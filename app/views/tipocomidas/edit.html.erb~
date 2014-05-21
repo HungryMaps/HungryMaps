@@ -1,6 +1,0 @@
-<h1>Editing tipocomida</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @tipocomida %> |
-<%= link_to 'Back', tipocomidas_path %>

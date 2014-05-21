@@ -3,7 +3,7 @@ class ProvinsController < ApplicationController
 
   # GET /provins
   # GET /provins.json
-  
+  def index
 
 def index
     if(@provins =Provin.search(params[:searchbox]) == nil)

@@ -1,5 +1,0 @@
-<h1>New provin</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Back', provins_path %>

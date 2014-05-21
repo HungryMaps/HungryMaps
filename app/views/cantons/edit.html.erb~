@@ -1,6 +1,0 @@
-<h1>Editing canton</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @canton %> |
-<%= link_to 'Back', cantons_path %>

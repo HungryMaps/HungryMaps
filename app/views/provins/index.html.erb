@@ -3,6 +3,13 @@
 </body>
 
 <center>
+<%= form_tag({:controller => "provins", :action => "index"}, :method => :get) do %>
+
+    <%= text_field_tag "searchbox", params[:searchbox] %>
+
+    <%= submit_tag "Buscar", :nombre_provincia => nil %>
+
+<% end %>
 <tablestyle="width:300px; text-allign=center;">
   <thead>
     <tr>

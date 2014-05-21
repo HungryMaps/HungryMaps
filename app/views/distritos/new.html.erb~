@@ -1,5 +1,0 @@
-<h1>New distrito</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Back', distritos_path %>

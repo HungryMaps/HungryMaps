@@ -1,5 +1,0 @@
-<h1>New categor</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Back', categors_path %>

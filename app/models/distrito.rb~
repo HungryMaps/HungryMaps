@@ -1,7 +1,0 @@
-class Distrito < ActiveRecord::Base
-	belongs_to :canton
-	belongs_to :direccion
-	validates_presence_of :direccion_id, :canton_id, message: "Indique un nombre"
-	validates_presence_of :nombre_distrito, message: "Indique un id"
-  	validates :canton, :direccion, presence: true
-end

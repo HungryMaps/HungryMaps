@@ -5,6 +5,13 @@
 
 
 <br>
+<%= form_tag({:controller => "provins", :action => "index"}, :method => :get) do %>
+
+    <%= text_field_tag "searchbox", params[:searchbox] %>
+
+    <%= submit_tag "Buscar", :nombre_provincia => nil %>
+
+<% end %>
 
 <center>
 <%= form_tag({:controller => "restaurantes", :action => "index"}, :method => :get) do %>
