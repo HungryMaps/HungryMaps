@@ -1,5 +1,0 @@
-<h1>New nutricion</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Back', nutricions_path %>

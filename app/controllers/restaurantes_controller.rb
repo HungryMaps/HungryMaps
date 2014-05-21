@@ -7,10 +7,30 @@ class RestaurantesController < ApplicationController
   def indice
   end
 
+
   # GET /restaurantes
   # GET /restaurantes.json
   def index
-    @restaurantes = Restaurante.all
+    if(@restaurantes = Restaurante.search(params[:searchbox]) == nil)
+       @restaurantes = Restaurante.all
+    else
+       @restaurantes = Restaurante.search(params[:searchbox])
+         respond_to do |format|
+         format.html # index.html.erb
+       end
+    end
+   
+  end
+
+def index5
+  @restaurantes = Restaurante.search(params[:searchbox])
+
+    respond_to do |format|
+
+      format.html # index.html.erb
+
+    end
+
   end
 
   # GET /restaurantes/1
