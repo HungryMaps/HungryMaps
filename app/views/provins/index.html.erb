@@ -1,9 +1,6 @@
-<body style="background-color:FCFDC5;">
-<h1 style="font-family:arial; text-align:center; color:A03719">Listando Provincias</h1>
-</body>
+<h1>Listando provincias</h1>
 
-<center>
-<tablestyle="width:300px; text-allign=center;">
+<table>
   <thead>
     <tr>
       <th>Nombre provincia</th>
@@ -19,14 +16,12 @@
         <td><%= provin.direccion_id %></td>
         <td><%= link_to 'Mostrar', provin %></td>
         <td><%= link_to 'Editar', edit_provin_path(provin) %></td>
-        <td><%= link_to 'Eliminar', provin, method: :delete, data: { confirm: '¿Está Seguro?' } %></td>
+        <td><%= link_to 'Destruir', provin, method: :delete, data: { confirm: '¿Está Seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-</center>
+
 <br>
-<center>
-<%= link_to 'Inicio', indice_path %>
+
 <%= link_to 'Nueva Provincia', new_provin_path %>
-</center>

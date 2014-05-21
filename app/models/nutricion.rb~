@@ -1,0 +1,2 @@
+class Nutricion < ActiveRecord::Base
+end

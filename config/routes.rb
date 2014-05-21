@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :nutricions
+
   resources :categors
 
   resources :tipocomidas

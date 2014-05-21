@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Menu:</strong>
+  <%= @nutricion.menu_id %>
+</p>
+
+<p>
+  <strong>Energia:</strong>
+  <%= @nutricion.energia %>
+</p>
+
+<p>
+  <strong>Grasas:</strong>
+  <%= @nutricion.grasas %>
+</p>
+
+<p>
+  <strong>Hidratos:</strong>
+  <%= @nutricion.hidratos %>
+</p>
+
+<p>
+  <strong>Proteinas:</strong>
+  <%= @nutricion.proteinas %>
+</p>
+
+<p>
+  <strong>Sal:</strong>
+  <%= @nutricion.sal %>
+</p>
+
+<%= link_to 'Editar', edit_nutricion_path(@nutricion) %> |
+<%= link_to 'Volver', nutricions_path %>
