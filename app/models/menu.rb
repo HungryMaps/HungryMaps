@@ -1,4 +1,5 @@
 class Menu < ActiveRecord::Base
+  has_many :nutricions
   belongs_to :restaurante
   belongs_to :categor
   validates_presence_of :restaurante_id, message: "Indique un id"
