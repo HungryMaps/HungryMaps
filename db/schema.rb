@@ -11,80 +11,46 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140521152125) do
+ActiveRecord::Schema.define(version: 20140526215701) do
 
-  create_table "cantons", force: true do |t|
-    t.string   "nombre_canton"
-    t.integer  "provin_id"
-    t.integer  "direccion_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "categors", force: true do |t|
-    t.string   "nombre_categoria"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "direccions", force: true do |t|
+  create_table "productos", force: true do |t|
+    t.string   "nombre_producto"
+    t.integer  "precio"
+    t.string   "descripcion"
+    t.integer  "tipo_producto_id"
     t.integer  "restaurante_id"
-    t.string   "señas"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "distritos", force: true do |t|
-    t.string   "nombre_distrito"
-    t.integer  "canton_id"
-    t.integer  "direccion_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "menus", force: true do |t|
-    t.integer  "restaurante_id"
-    t.string   "nombre_platillo"
-    t.float    "precio"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "categor_id"
-  end
-
-  create_table "nutricions", force: true do |t|
-    t.string   "menu_id"
-    t.float    "energia"
-    t.float    "grasas"
-    t.float    "hidratos"
-    t.float    "proteinas"
-    t.float    "sal"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "provins", force: true do |t|
-    t.string   "nombre_provincia"
-    t.integer  "direccion_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "restaurantes", force: true do |t|
     t.string   "nombre_restaurante"
+    t.integer  "telefono"
+    t.string   "correo_electronico"
+    t.integer  "fax"
+    t.integer  "tipo_comida_id"
+    t.string   "señas"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "telefonos", force: true do |t|
+  create_table "tipo_comidas", force: true do |t|
+    t.string   "tipo_comida"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tipo_productos", force: true do |t|
+    t.string   "tipo_producto"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "ubicacions", force: true do |t|
+    t.string   "provincia"
+    t.string   "canton"
+    t.string   "distrito"
     t.integer  "restaurante_id"
-    t.string   "telefono"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "tipocomidas", force: true do |t|
-    t.string   "restaurante_id"
-    t.string   "tipocomida"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

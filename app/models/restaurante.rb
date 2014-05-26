@@ -1,11 +1,11 @@
 class Restaurante < ActiveRecord::Base
-  has_many :menus
-  has_many :direccions
-  has_many :telefonos
-  has_many :tipocomidas
+  has_many :productos
+  belongs_to :tipo_comida
+  has_one :ubicacion
   validates_presence_of :nombre_restaurante, message: "Indique un nombre"
-
-def self.search(search)
+  validates_presence_of :telefono, message: "Indique un telefono para el restaurante"
+  validates_presence_of :correo_electronico, message: "Indique un telefono para el"
+  def self.search(search)
 
  if search 
 
@@ -14,5 +14,4 @@ def self.search(search)
   end
 
 end
-
 end

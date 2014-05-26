@@ -2,8 +2,16 @@
 
 one:
   nombre_restaurante: MyString
+  telefono: 1
+  correo_electronico: MyString
+  fax: 1
   tipo_comida_id: 1
+  señas: MyString
 
 two:
   nombre_restaurante: MyString
+  telefono: 1
+  correo_electronico: MyString
+  fax: 1
   tipo_comida_id: 1
+  señas: MyString

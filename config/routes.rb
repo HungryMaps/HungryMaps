@@ -1,27 +1,13 @@
 Rails.application.routes.draw do
-  resources :nutricions
+  resources :ubicacions
 
-  resources :categors
+  resources :tipo_productos
 
-  resources :tipocomidas
+  resources :tipo_comidas
 
-  resources :telefonos
-
-  resources :provins
+  resources :productos
 
   resources :restaurantes
-
-  resources :distritos
-
-  resources :cantons
-
-  resources :direccions
-
-  resources :menus
-
-  get '/restaurantes/:id/menus' => 'restaurantes#restmenus', as: 'rest_menus'  
-
-  get '/' => 'restaurantes#indice', as: 'indice' 
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

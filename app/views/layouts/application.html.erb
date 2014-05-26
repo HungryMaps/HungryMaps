@@ -1,29 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>HungryMaps</title>
+  <title>Hungry</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-<nav class='navbar'>
-	<div class='navbar-inner'>
-          <ul class='nav'>
-		 <li><%= link_to 'Inicio', indice_path %></li> 
-	        <li><%= link_to 'Restaurantes', restaurantes_path %></li> 
-	        <li><%= link_to 'Menu', menus_path %></li>
-		<li><%= link_to 'Tipos de Comida', tipocomidas_path %></li>
-		<li><%= link_to 'Categorías', categors_path %></li>
-		<li><%= link_to 'Categorías', categors_path %></li>	   	
-	
-		<li><%= link_to 'Provincias', provins_path %></li>
-		<li><%= link_to 'Cantones', cantons_path %></li>
-		<li><%= link_to 'Distritos', distritos_path %></li>
-		<li><%= link_to 'Teléfonos', telefonos_path %></li>
-          </ul>
-	</div>
- </nav>
 
 <%= yield %>
 

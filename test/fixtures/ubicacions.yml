@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  provincia: MyString
+  canton: MyString
+  distrito: MyString
+  restaurante_id: 1
+
+two:
+  provincia: MyString
+  canton: MyString
+  distrito: MyString
+  restaurante_id: 1

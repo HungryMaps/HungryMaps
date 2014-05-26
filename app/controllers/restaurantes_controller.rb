@@ -1,16 +1,9 @@
 class RestaurantesController < ApplicationController
-  before_action :set_restaurante, only: [:show, :edit, :update, :destroy, :restmenus]
-
-  def restmenus
-  end
-
-  def indice
-  end
-
+  before_action :set_restaurante, only: [:show, :edit, :update, :destroy]
 
   # GET /restaurantes
   # GET /restaurantes.json
-  def index
+ def index
     if(@restaurantes = Restaurante.search(params[:searchbox]) == nil)
        @restaurantes = Restaurante.all
     else
@@ -20,17 +13,6 @@ class RestaurantesController < ApplicationController
        end
     end
    
-  end
-
-def index5
-  @restaurantes = Restaurante.search(params[:searchbox])
-
-    respond_to do |format|
-
-      format.html # index.html.erb
-
-    end
-
   end
 
   # GET /restaurantes/1
@@ -95,6 +77,6 @@ def index5
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def restaurante_params
-      params.require(:restaurante).permit(:nombre_restaurante, :tipo_comida_id)
+      params.require(:restaurante).permit(:nombre_restaurante, :telefono, :correo_electronico, :fax, :tipo_comida_id, :señas)
     end
 end
