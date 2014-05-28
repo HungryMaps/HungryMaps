@@ -30,10 +30,5 @@
   <%= @restaurante.señas %>
 </p>
 
-<p>
-  <strong>Menu:</strong>
-  <%= link_to 'Vea El Menu', rest_menu_path%>
-</p>
-
 <%= link_to 'Edit', edit_restaurante_path(@restaurante) %> |
 <%= link_to 'Back', restaurantes_path %>

@@ -1,0 +1,13 @@
+
+<p id="notice"><%= notice %></p>
+
+
+<p>
+  <strong>Menus: </strong> <br>
+  <% @restaurante.productos.each do |m| %>
+  <%= m.nombre_producto %>
+  <%= m.precio %> <br>
+  <% end %>
+</p>
+
+<%= link_to 'Volver', @restaurante %> 

@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   get '/restaurantes/:id/menu' => 'restaurantes#restmenu', as: 'rest_menu'  
 
-  get '/' => 'homes#index', as: 'indice' 
+  get '/' => 'homes#indice', as: 'indice' 
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
