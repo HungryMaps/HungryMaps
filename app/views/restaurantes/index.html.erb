@@ -1,6 +1,16 @@
-<h1>Lista restaurantes</h1>
+<body style="background-color:A9DC3B;">
+<center>
+<br>
+<br>
+<h1>Lista de Restaurantes</h1>
+<br>
+<style type="text/css">
+.myTable { background-color:#eee;border-collapse:collapse; }
+.myTable th { background-color:#45A91A;color:white;width:50%; }
+.myTable td, .myTable th { padding:5px;border:1px solid #000; }
+</style>
 
-<table>
+<table class="myTable" style="width:700px">
   <thead>
     <tr>
       <th>Nombre restaurante</th>
@@ -38,3 +48,4 @@
 <br>
 
 <%= link_to 'Nuevo Restaurante', new_restaurante_path %>
+</center>

@@ -1,4 +1,4 @@
-<body style="background-color:FCFDC5;">
+<body style="background-color:A9DC3B;">
 <h1 style="font-family:arial; text-align:center; color:A03719"> Lista Tablas </h1>
 </body>
 
@@ -26,6 +26,4 @@
 <%= link_to 'Ubicaciones', ubicacions_path %> <br>
 </h2>
 
-<h2 style="text-align:center;" > 
-<%= link_to 'Telefonos', telefonos_path %> <br>
-</h2>
+
