@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<h1 style="color:green;">Restaurante</h1>
+
 <p>
   <strong>Nombre restaurante:</strong>
   <%= @restaurante.nombre_restaurante %>
@@ -28,6 +30,11 @@
 <p>
   <strong>Señas:</strong>
   <%= @restaurante.señas %>
+</p>
+
+<p>
+  <strong>Menu:</strong>
+  <%= link_to 'Vea El Menu', rest_menu_path%>
 </p>
 
 <%= link_to 'Edit', edit_restaurante_path(@restaurante) %> |

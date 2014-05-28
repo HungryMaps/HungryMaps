@@ -1,5 +1,5 @@
 <center>
-<h1 style="color:green;">Nuevo Restaurante</h1>
+<h1 style:"color:green;">Nuevo Restaurante</h1>
 
 <%= render 'form' %>
 

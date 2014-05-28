@@ -3,6 +3,7 @@
 <br>
 <br>
 <h1>Lista de Restaurantes</h1>
+<br>
 <style type="text/css">
 .myTable { background-color:#eee;border-collapse:collapse; }
 .myTable th { background-color:#45A91A;color:white;width:50%; }

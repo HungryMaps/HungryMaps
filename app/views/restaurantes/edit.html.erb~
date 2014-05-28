@@ -1,6 +1,6 @@
 <center>
 <br>
-<h1 style="color:green;">Editar Restaurante</h1>
+<h1 style="color:green;" >Editar Restaurante</h1>
 
 <%= render 'form' %>
 

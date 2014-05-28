@@ -39,7 +39,7 @@
         <td><%= restaurante.tipo_comida_id %></td>
         <td><%= restaurante.señas %></td>
         <td><%= link_to 'Editar', edit_restaurante_path(restaurante) %></td>
-        <td><%= link_to 'Eliminar', restaurante, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Eliminar', restaurante, method: :delete, data: { confirm: '¿Está seguro de que desea eliminar este restaurante?' } %></td>
       </tr>
     <% end %>
   </tbody>
