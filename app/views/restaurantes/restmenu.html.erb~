@@ -6,7 +6,6 @@
 <h1 style="color:green;">Menú</h1>
 
 <p>
-
   <% @restaurante.productos.each do |m| %>
   <%= m.nombre_producto %>
   <%= m.precio %> <br>

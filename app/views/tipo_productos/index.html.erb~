@@ -10,7 +10,7 @@
 .myTable td, .myTable th { text-align:center; padding:5px;border:1px solid #000; }
 </style>
 
-<table class="myTable" style="width:400px">
+<table class="myTable" style="width:700px">
   <thead>
     <tr>
       <th>Tipo producto</th>

@@ -1,3 +1,4 @@
+<center>
 <p id="notice"><%= notice %></p>
 
 <h1 style="color:green;">Restaurante</h1>
@@ -39,3 +40,4 @@
 
 <%= link_to 'Edit', edit_restaurante_path(@restaurante) %> |
 <%= link_to 'Back', restaurantes_path %>
+</center>

@@ -1,16 +1,6 @@
-<body style="background-color:#CAF078;">
-<center>
-<br>
-<br>
-<h1>Lista de Ubicaciones</h1>
-<br>
-<style type="text/css">
-.myTable { background-color:#eee;border-collapse:collapse; }
-.myTable th { background-color:#45A91A;color:white;width:50%; }
-.myTable td, .myTable th { text-align:center; padding:5px;border:1px solid #000; }
-</style>
+<h1>Lista de ubicaciones</h1>
 
-<table class="myTable" style="width:700px">
+<table>
   <thead>
     <tr>
       <th>Provincia</th>
@@ -30,7 +20,7 @@
         <td><%= ubicacion.restaurante_id %></td>
         <td><%= link_to 'Mostrar', ubicacion %></td>
         <td><%= link_to 'Editar', edit_ubicacion_path(ubicacion) %></td>
-        <td><%= link_to 'Eliminar', ubicacion, method: :delete, data: { confirm: '¿Está seguro de que desea eliminar esta ubicación?' } %></td>
+        <td><%= link_to 'Eliminar', ubicacion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -39,4 +29,3 @@
 <br>
 
 <%= link_to 'Nueva Ubicacion', new_ubicacion_path %>
-</center>

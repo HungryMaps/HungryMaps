@@ -1,5 +1,4 @@
 <center>
-<br>
 <p id="notice"><%= notice %></p>
 
 <h1 style="color:green;">Tipo de Producto</h1>

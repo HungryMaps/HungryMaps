@@ -1,6 +1,5 @@
-<body style="background-color:A9DC3B;">
-<h1 style="font-family:arial; text-align:center; color:A03719"> Lista Tablas </h1>
-</body>
+<body style="background-color:#F7FAA9;">
+
 
 <h1 style="text-align:center;">
 <%=image_tag ("hungrymaps.PNG")%>
