@@ -7,7 +7,8 @@ class Restaurante < ActiveRecord::Base
   validates_presence_of :correo_electronico, message: "Indique un email para el restaurante"
   validates :tipo_comida, presence: true
 
-  def self.search(search)
+  
+def self.search(search)
 
  if search 
 
