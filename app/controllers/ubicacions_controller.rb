@@ -3,8 +3,18 @@ class UbicacionsController < ApplicationController
 
   # GET /ubicacions
   # GET /ubicacions.json
+  
+  
   def index
-    @ubicacions = Ubicacion.all
+    if(@ubicacions = Ubicacion.search(params[:searchbox]) == nil)
+       @ubicacions = Ubicacion.all
+    else
+       @ubicacions = Ubicacion.search(params[:searchbox])
+         respond_to do |format|
+         format.html # index.html.erb
+       end
+    end
+   
   end
 
   # GET /ubicacions/1

@@ -22,12 +22,20 @@
   </thead>
 
   <tbody>
+  
+  <%= form_tag({:controller => "ubicacions", :action => "index"}, :method => :get) do %>
+
+    <%= text_field_tag "searchbox", params[:searchbox] %>
+
+    <%= submit_tag "Buscar", :provincia => nil %>
+
+<% end %>
     <% @ubicacions.each do |ubicacion| %>
       <tr>
         <td><%= ubicacion.provincia %></td>
         <td><%= ubicacion.canton %></td>
         <td><%= ubicacion.distrito %></td>
-        <td><%= ubicacion.restaurante_id %></td>
+        <td><%= ubicacion.restaurante_id %></td>  
         <td><%= link_to 'Mostrar', ubicacion %></td>
         <td><%= link_to 'Editar', edit_ubicacion_path(ubicacion) %></td>
         <td><%= link_to 'Eliminar', ubicacion, method: :delete, data: { confirm: '¿Está seguro de que desea eliminar esta ubicación?' } %></td>
