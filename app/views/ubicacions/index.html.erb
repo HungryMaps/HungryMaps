@@ -22,6 +22,25 @@
 
   <tbody>
   
+  <p>
+     <strong> BÚSQUEDA POR PROVINCIA </strong> 
+  </p>
+  <% a = [] %>
+  <% k = 0 %>
+  <% for n in Ubicacion.all %>
+  <% 	b = [] %>
+  <% 	b[0] = n.provincia %>
+  <%    b[1] = n.id %>
+  <%    a[k] = b %>
+  <% 	k += 1 %>
+  <% end %>
+  
+  <%= select(:restaurante, :tipo_comida_id, a) %>
+
+
+
+  <p>
+  
   <%= form_tag({:controller => "ubicacions", :action => "index"}, :method => :get) do %>
 
     <%= text_field_tag "searchbox", params[:searchbox] %>
