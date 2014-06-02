@@ -35,19 +35,19 @@
   <% 	k += 1 %>
   <% end %>
   
-  <%= select(:restaurante, :tipo_comida_id, a) %>
+  <%=  select(:prov, :nombre_provincia, a) %>
 
+    <%= form_tag({:controller => "ubicacions", :action => "index"}, :method => :get) do %>
 
-
-  <p>
-  
-  <%= form_tag({:controller => "ubicacions", :action => "index"}, :method => :get) do %>
-
-    <%= text_field_tag "searchbox", params[:searchbox] %>
+    <%= params[:a] %>
 
     <%= submit_tag "Buscar", :provincia => nil %>
 
 <% end %>
+
+  <p>
+  
+
     <% @ubicacions.each do |ubicacion| %>
       <tr>
         <td><%= ubicacion.provincia %></td>

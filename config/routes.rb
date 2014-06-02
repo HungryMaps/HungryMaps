@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :provs
+
   resources :homes
 
   resources :ubicacions
