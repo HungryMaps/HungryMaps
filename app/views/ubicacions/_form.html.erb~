@@ -23,6 +23,10 @@
     <%= f.label :distrito %><br>
     <%= f.text_field :distrito %>
   </div>
+  <div class="field">
+    <%= f.label :restaurante_id %><br>
+    <%= f.number_field :restaurante_id %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

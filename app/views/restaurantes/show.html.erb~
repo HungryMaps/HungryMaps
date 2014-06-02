@@ -1,5 +1,6 @@
 <center>
 <p id="notice"><%= notice %></p>
+<br>
 
 <h1 style="color:green;">Restaurante</h1>
 

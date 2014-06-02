@@ -26,7 +26,12 @@
 
 <p>
   <strong>Tipo comida:</strong>
-  <%= @restaurante.tipo_comida_id %>
+  <%= @restaurante.tipo_comida.tipo_comida %>
+</p>
+
+<p>
+  <strong>Direccion:</strong>
+  <%= @restaurante.ubicacion.provincia+" "+@restaurante.ubicacion.canton+" "+@restaurante.ubicacion.distrito %>
 </p>
 
 <p>

@@ -17,7 +17,6 @@
       <th>Telefono</th>
       <th>Correo electronico</th>
       <th>Fax</th>
-      <th>Tipo comida</th>
       <th>Señas</th>
       <th colspan="3"></th>
     </tr>
@@ -38,7 +37,6 @@
         <td><%= restaurante.telefono %></td>
         <td><%= restaurante.correo_electronico %></td>
         <td><%= restaurante.fax %></td>
-        <td><%= restaurante.tipo_comida_id %></td>
         <td><%= restaurante.señas %></td>
         <td><%= link_to 'Editar', edit_restaurante_path(restaurante) %></td>
         <td><%= link_to 'Eliminar', restaurante, method: :delete, data: { confirm: '¿Está seguro de que desea eliminar este restaurante?' } %></td>

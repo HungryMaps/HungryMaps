@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140528023443) do
+ActiveRecord::Schema.define(version: 20140602014554) do
 
   create_table "homes", force: true do |t|
     t.datetime "created_at"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20140528023443) do
     t.string   "señas"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "ubicacion_id"
   end
 
   create_table "tipo_comidas", force: true do |t|
@@ -55,7 +56,6 @@ ActiveRecord::Schema.define(version: 20140528023443) do
     t.string   "provincia"
     t.string   "canton"
     t.string   "distrito"
-    t.integer  "restaurante_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

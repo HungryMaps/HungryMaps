@@ -11,10 +11,40 @@
     </div>
   <% end %>
 
+  <p>
+     <strong>Tipo de Comida:</strong> 
+  </p>
+  <% a = [] %>
+  <% k = 0 %>
+  <% for n in TipoComida.all %>
+  <% 	b = [] %>
+  <% 	b[0] = n.tipo_comida %>
+  <%    b[1] = n.id %>
+  <%    a[k] = b %>
+  <% 	k += 1 %>
+  <% end %>
+  
+  <%= select(:restaurante, :tipo_comida_id, a) %>
+
+  <% c = [] %>
+  <% j = 0 %>
+  <% for i in Ubicacion.all %>
+  <% 	d = [] %>
+  <% 	d[0] = i.provincia+" "+i.canton+" "+i.distrito %>
+  <%    d[1] = i.id %>
+  <%    c[j] = d %>
+  <% 	j += 1 %>
+  <% end %>
+
+  <p>
+     <strong>Direccion:</strong> 
+  </p>
+  <%= select(:restaurante, :ubicacion_id, c) %>
+
   <div class="field">
     <%= f.label :nombre_restaurante %><br>
     <%= f.text_field :nombre_restaurante %>
-  </div>
+  </div> 
   <div class="field">
     <%= f.label :telefono %><br>
     <%= f.number_field :telefono %>
@@ -26,10 +56,6 @@
   <div class="field">
     <%= f.label :fax %><br>
     <%= f.number_field :fax %>
-  </div>
-  <div class="field">
-    <%= f.label :tipo_comida_id %><br>
-    <%= f.number_field :tipo_comida_id %>
   </div>
   <div class="field">
     <%= f.label :señas %><br>

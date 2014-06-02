@@ -1,5 +1,5 @@
 class RestaurantesController < ApplicationController
-  before_action :set_restaurante, only: [:show, :edit, :update, :destroy, :indice]
+  before_action :set_restaurante, only: [:show, :edit, :update, :destroy, :restmenu]
 
   # GET /restaurantes
   # GET /restaurantes.json
@@ -15,7 +15,7 @@ class RestaurantesController < ApplicationController
    
   end
 
-  def indice
+  def restmenu
   end
 
   # GET /restaurantes/1

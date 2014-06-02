@@ -7,7 +7,7 @@
 <style type="text/css">
 .myTable { background-color:#eee;border-collapse:collapse; }
 .myTable th { background-color:#45A91A;color:white;width:50%; }
-.myTable td, .myTable th { padding:5px;border:1px solid #000; }
+.myTable td, .myTable th { text-align:center; padding:5px;border:1px solid #000; }
 </style>
 
 <table class="myTable" style="width:700px">
@@ -22,14 +22,16 @@
       <th colspan="3"></th>
     </tr>
   </thead>
-<%= form_tag({:controller => "restaurantes", :action => "index"}, :method => :get) do %>
+
+  <tbody>
+  
+  <%= form_tag({:controller => "restaurantes", :action => "index"}, :method => :get) do %>
 
     <%= text_field_tag "searchbox", params[:searchbox] %>
 
     <%= submit_tag "Buscar", :nombre_restaurante => nil %>
 
 <% end %>
-  <tbody>
     <% @restaurantes.each do |restaurante| %>
       <tr>
         <td><%= link_to restaurante.nombre_restaurante, restaurante %></td>

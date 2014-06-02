@@ -1,6 +1,16 @@
-<h1>Lista de ubicaciones</h1>
+<body style="background-color:#CAF078;">
+<center>
+<br>
+<br>
+<h1>Lista de Ubicaciones</h1>
+<br>
+<style type="text/css">
+.myTable { background-color:#eee;border-collapse:collapse; }
+.myTable th { background-color:#45A91A;color:white;width:50%; }
+.myTable td, .myTable th { text-align:center; padding:5px;border:1px solid #000; }
+</style>
 
-<table>
+<table class="myTable" style="width:700px">
   <thead>
     <tr>
       <th>Provincia</th>
@@ -12,15 +22,23 @@
   </thead>
 
   <tbody>
+  
+  <%= form_tag({:controller => "ubicacions", :action => "index"}, :method => :get) do %>
+
+    <%= text_field_tag "searchbox", params[:searchbox] %>
+
+    <%= submit_tag "Buscar", :provincia => nil %>
+
+<% end %>
     <% @ubicacions.each do |ubicacion| %>
       <tr>
         <td><%= ubicacion.provincia %></td>
         <td><%= ubicacion.canton %></td>
         <td><%= ubicacion.distrito %></td>
-        <td><%= ubicacion.restaurante_id %></td>
+        <td><%= ubicacion.restaurante.nombre_restaurante %></td>  
         <td><%= link_to 'Mostrar', ubicacion %></td>
         <td><%= link_to 'Editar', edit_ubicacion_path(ubicacion) %></td>
-        <td><%= link_to 'Eliminar', ubicacion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Eliminar', ubicacion, method: :delete, data: { confirm: '¿Está seguro de que desea eliminar esta ubicación?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -29,3 +47,4 @@
 <br>
 
 <%= link_to 'Nueva Ubicacion', new_ubicacion_path %>
+</center>
