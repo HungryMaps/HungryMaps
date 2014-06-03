@@ -8,17 +8,8 @@
 </head>
 <body>
 
-<nav class='navbar'>
-	<div class='navbar-inner'>
-          <ul class='nav'>
-		 <li><%= link_to 'HungryMaps', indice_path %></li> 
-	        <li><%= link_to 'Restaurantes', restaurantes_path %></li> 
-	        <li><%= link_to 'Crear Cuenta', indice_path %></li>
-	        <li><%= link_to 'Ingresar', indice_path %></li>
-		
-          </ul>
-	</div>
- </nav>
+<p class='notice'><% notice%></p>
+<p class='alert'><% alert%></p>
 
 <%= yield %>
 

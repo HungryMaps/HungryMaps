@@ -1,3 +1,13 @@
+
+
+<% if user_signed_in? %>
+  <p>Bienvenido <%= current_user.email %></p>
+  <p><%= link_to "Cerrar Sesión", destroy_user_session_path, method: :delete %></p>
+<% else%>
+  <p><%=link_to "Crea una cuenta", new_user_registration_path %></p>
+  <p> Si ya Tienes cuenta: <%=link_to "Inicia Sesión", new_user_session_path %></p>
+<%end%>
+
 <body style="background-color:#FEFFE3;">
 
 
