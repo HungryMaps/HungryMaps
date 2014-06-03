@@ -28,12 +28,6 @@ ActiveRecord::Schema.define(version: 20140602215748) do
     t.datetime "updated_at"
   end
 
-  create_table "provinvia", force: true do |t|
-    t.string   "nombre_provincia"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "provs", force: true do |t|
     t.string   "nombre_provincia"
     t.datetime "created_at"
