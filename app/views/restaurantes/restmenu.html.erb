@@ -5,12 +5,32 @@
 
 <h1 style="color:green;">Menú</h1>
 
-<p>
-  <% @restaurante.productos.each do |m| %>
-  <%= m.nombre_producto %>
-  <%= m.precio %> <br>
-  <% end %>
-</p>
+<br>
+<style type="text/css">
+.myTable { background-color:#eee;border-collapse:collapse; }
+.myTable th { background-color:#45A91A;color:white;width:50%; }
+.myTable td, .myTable th { text-align:center; padding:5px;border:1px solid #000; }
+</style>
 
+<table class="myTable" style="width:500px">
+  <thead>
+    <tr>
+      <th>Producto</th>
+      <th>Precio</th>
+    </tr>
+  </thead>
+  <tbody>
+
+<% @restaurante.productos.each do |m| %>
+      <tr>
+        <td>  <%= m.nombre_producto %></td>
+        <td><%= m.precio %> <br></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<br>
 <%= link_to 'Volver', @restaurante %> 
 </center>

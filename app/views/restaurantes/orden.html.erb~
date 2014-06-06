@@ -1,0 +1,16 @@
+<br>
+<center>
+
+<p id="notice"><%= notice %></p>
+
+<h1 style="color:green;">Orden</h1>
+
+<p>
+  <% @restaurante.productos.each do |m| %>
+  <%= m.nombre_producto %>
+  <%= m.precio %> <br>
+  <% end %>
+</p>
+
+<%= link_to 'Volver', @restaurante %> 
+</center>

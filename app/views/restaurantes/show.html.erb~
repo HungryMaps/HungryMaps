@@ -26,7 +26,12 @@
 
 <p>
   <strong>Tipo comida:</strong>
-  <%= @restaurante.tipo_comida_id %>
+  <%= @restaurante.tipo_comida.tipo_comida %>
+</p>
+
+<p>
+  <strong>Direccion:</strong>
+  <%= @restaurante.ubicacion.provincia+" "+@restaurante.ubicacion.canton+" "+@restaurante.ubicacion.distrito %>
 </p>
 
 <p>
@@ -38,6 +43,12 @@
   <strong>Menu:</strong>
   <%= link_to 'Vea El Menu', rest_menu_path%>
 </p>
+
+<p>
+  <strong>Orden:</strong>
+
+</p>
+
 
 <%= link_to 'Edit', edit_restaurante_path(@restaurante) %> |
 <%= link_to 'Back', restaurantes_path %>
