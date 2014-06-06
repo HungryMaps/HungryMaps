@@ -31,6 +31,15 @@
 </table>
 
 <br>
+<br>
+
+
+<p>
+  <%= link_to 'Orden', orden_path%>
+</p>
+
+<br>
+<br>
 
 <%= link_to 'Volver', @restaurante %> 
 </center>

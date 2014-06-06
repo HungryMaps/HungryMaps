@@ -46,7 +46,7 @@
 
 <p>
   <strong>Orden:</strong>
-
+  <%= link_to 'Orden', orden_path%>
 </p>
 
 
