@@ -1,4 +1,14 @@
-<body style="background-color:#F7FAA9;">
+
+
+<% if user_signed_in? %>
+  <p>Bienvenido <%= current_user.email %></p>
+  <p><%= link_to "Cerrar Sesión", destroy_user_session_path, method: :delete %></p>
+<% else%>
+  
+
+<%end%>
+
+<body style="background-color:#FEFFE3;">
 
 
 <h1 style="text-align:center;">

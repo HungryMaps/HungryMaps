@@ -21,10 +21,9 @@
         <ul class="nav">
 	<li><%= link_to 'HungryMaps', indice_path %></li> 
 	<li><%= link_to 'Restaurantes', restaurantes_path %></li>
-<button type="button" class="btn btn-default navbar-btn"><li><%=link_to "Registrarse",  new_user_registration_path %></li> </button>
-
 <button type="button" class="btn btn-default navbar-btn"><li><%=link_to "Inicia Sesión", new_user_session_path %></li> </button>
       
+
         </ul>
       </div>
     </div>
