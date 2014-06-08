@@ -1,3 +1,68 @@
+<% if user_signed_in? %>
+<body>
+
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <div class="nav-collapse">
+        <ul class="nav">
+	<li><%= link_to 'HungryMaps', indice_path %></li> 
+	<li><%= link_to 'Restaurantes', restaurantes_path %></li>
+<button type="button" class="btn btn-default navbar-btn"><li><%= link_to "Cerrar Sesión", destroy_user_session_path, method: :delete %></li> </button>
+     
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+<p class='notice'><% notice%></p>
+<p class='alert'><% alert%></p>
+<p>Bienvenido <%= current_user.email %></p>
+<%= yield %>
+
+</body>
+
+<% else%>
+<body>
+
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <div class="nav-collapse">
+        <ul class="nav">
+	<li><%= link_to 'HungryMaps', indice_path %></li> 
+	<li><%= link_to 'Restaurantes', restaurantes_path %></li>
+<button type="button" class="btn btn-default navbar-btn"><li><%=link_to "Registrarse",  new_user_registration_path %></li> </button>
+
+<button type="button" class="btn btn-default navbar-btn"><li><%=link_to "Inicia Sesión", new_user_session_path %></li> </button>
+     
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+<p class='notice'><% notice%></p>
+<p class='alert'><% alert%></p>
+
+<%= yield %>
+
+</body>
+
+<%end%>
+
+
 <body style="background-color:#CAF078;">
 <center>
 <br>
