@@ -1,7 +1,7 @@
 
 
 <% if user_signed_in? %>
-<p>Bienvenido <%= current_user.email %></p>
+<p>Bienvenido <%= current_user.email %> </p>
 <body>
 
 <div class="navbar navbar-fixed-top">
@@ -16,9 +16,12 @@
         <ul class="nav">
 	<li><%= link_to 'HungryMaps', indice_path %></li> 
 	<li><%= link_to 'Restaurantes', restaurantes_path %></li>
-<button type="button" class="btn btn-default navbar-btn"><li><%=link_to "Registrarse",  new_user_registration_path %></li> </button>
+	<li><%= link_to "Registrarse",  new_user_registration_path %></li>
+	<li><%= link_to "Cerrar Sesión", destroy_user_session_path, method: :delete %></li> 
 
-<button type="button" class="btn btn-default navbar-btn"><li><%= link_to "Cerrar Sesión", destroy_user_session_path, method: :delete %></li> </button>
+<!-- <button type="button" class="btn btn-default navbar-btn"><li><%=link_to "Registrarse",  new_user_registration_path %></li> </button> -->
+
+<!-- <button type="button" class="btn btn-default navbar-btn"><li><%= link_to "Cerrar Sesión", destroy_user_session_path, method: :delete %></li> </button> -->
      
         </ul>
       </div>

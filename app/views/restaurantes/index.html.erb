@@ -38,8 +38,14 @@
         <td><%= restaurante.correo_electronico %></td>
         <td><%= restaurante.fax %></td>
         <td><%= restaurante.señas %></td>
-        <td><%= link_to 'Editar', edit_restaurante_path(restaurante) %></td>
-        <td><%= link_to 'Eliminar', restaurante, method: :delete, data: { confirm: '¿Está seguro de que desea eliminar este restaurante?' } %></td>
+	
+	<% if user_signed_in? %> 
+		<% if current_user.id == restaurante.user_id %>
+       			<td><%= link_to 'Editar', edit_restaurante_path(restaurante) %></td>
+       			<td><%= link_to 'Eliminar', restaurante, method: :delete, data: { confirm: '¿Está seguro de que desea eliminar este restaurante?' } %></td>
+		<% end %>
+        <% end %>
+
       </tr>
     <% end %>
   </tbody>

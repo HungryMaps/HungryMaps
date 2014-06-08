@@ -1,5 +1,6 @@
 class RestaurantesController < ApplicationController
   before_action :set_restaurante, only: [:show, :edit, :update, :destroy, :restmenu, :orden]
+  before_action :authenticate_user!, only: [:orden, :edit, :update, :destroy, :new]
 
   # GET /restaurantes
   # GET /restaurantes.json
@@ -28,7 +29,10 @@ class RestaurantesController < ApplicationController
 
   # GET /restaurantes/new
   def new
-    @restaurante = Restaurante.new
+    @restaurante = Restaurante.new(user_id: current_user.id)
+    if current_user.tipo == "0"
+    	redirect_to ('/restaurantes')
+    end
   end
 
   # GET /restaurantes/1/edit
@@ -83,6 +87,7 @@ class RestaurantesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def restaurante_params
-      params.require(:restaurante).permit(:nombre_restaurante, :telefono, :correo_electronico, :fax, :tipo_comida_id, :señas, :ubicacion_id)
+      params.require(:restaurante).permit(:nombre_restaurante, :telefono, :correo_electronico, :fax, :ubicacion_id, :user_id, :tipo_comida_id, :señas)
     end
+
 end

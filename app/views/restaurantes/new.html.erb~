@@ -1,7 +1,9 @@
 <center>
+<br>
 <h1 style="color:green;">Nuevo Restaurante</h1>
 
 <%= render 'form' %>
+<% @restaurante.user_id = current_user.id %>
 
 <%= link_to 'Back', restaurantes_path %>
 </center>

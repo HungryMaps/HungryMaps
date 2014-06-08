@@ -37,7 +37,7 @@
   <% end %>
 
   <p>
-     Direccion:
+     <strong>Direccion:</strong> 
   </p>
   <%= select(:restaurante, :ubicacion_id, c) %>
 

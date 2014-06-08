@@ -1,11 +1,12 @@
 class Restaurante < ActiveRecord::Base
   has_many :productos
   belongs_to :tipo_comida
-  has_one :ubicacion
+  belongs_to :ubicacion
   validates_presence_of :nombre_restaurante, message: "Indique un nombre"
   validates_presence_of :telefono, message: "Indique un telefono para el restaurante"
   validates_presence_of :correo_electronico, message: "Indique un email para el restaurante"
   validates :tipo_comida, presence: true
+  validates :ubicacion, presence: true
 
   
 def self.search(search)
