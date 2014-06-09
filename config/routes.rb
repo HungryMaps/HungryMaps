@@ -15,8 +15,12 @@ Rails.application.routes.draw do
   resources :restaurantes
 
   get '/restaurantes/:id/menu' => 'restaurantes#restmenu', as: 'rest_menu'  
+	
+  get '/restaurantes/:id/platillo' => 'restaurantes#platillo', as: 'platillo' 
+	
+  get '/restaurantes/:id/platillo/edit' => 'restaurantes#platillo_edit', as: 'platillo_edit' 
 
-   get '/restaurantes/:id/orden' => 'restaurantes#orden', as: 'orden'
+  get '/restaurantes/:id/orden' => 'restaurantes#orden', as: 'orden'
 
   get '/' => 'homes#index', as: 'indice' 
 

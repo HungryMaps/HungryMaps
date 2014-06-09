@@ -5,7 +5,7 @@ class ProductosController < ApplicationController
   # GET /productos.json
   def index
     @productos = Producto.all
-    redirect_to('/restaurantes')
+    #redirect_to('/restaurantes')
   end
 
   # GET /productos/1

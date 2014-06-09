@@ -1,5 +1,5 @@
 class RestaurantesController < ApplicationController
-  before_action :set_restaurante, only: [:show, :edit, :update, :destroy, :restmenu, :orden]
+  before_action :set_restaurante, only: [:show, :edit, :update, :destroy, :restmenu, :orden, :platillo, :platillo_edit]
   before_action :authenticate_user!, only: [:orden, :edit, :update, :destroy, :new]
 
   # GET /restaurantes
@@ -14,6 +14,15 @@ class RestaurantesController < ApplicationController
        end
     end
    
+  end
+
+  def platillo_edit
+     @producto = Producto.find(params[:foo_param])
+     render 'platillo'
+  end
+
+  def platillo
+     @producto = Producto.new
   end
 
   def restmenu

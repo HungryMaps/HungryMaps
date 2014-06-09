@@ -80,9 +80,10 @@
   <div><%= f.label :password_confirmation, "Confirmar Contraseña" %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
 
-  <div><%= f.submit "Registrarse" %></div>
-
   <div> Administrador: <%= f.check_box :tipo %> </div>
+
+  <br>
+  <div><%= f.submit "Registrarse" %></div>
 
 <% end %>
 

@@ -1,3 +1,4 @@
+<!-- CUENTA DE USUARIO-->
 <% if user_signed_in? %>
 <body>
 
@@ -62,6 +63,7 @@
 
 <%end%>
 
+<!--HASTA AQUI CUENTA DE USUARIO-->
 
 <body style="background-color:#CAF078;">
 <center>
@@ -103,9 +105,13 @@
         <td><%= restaurante.correo_electronico %></td>
         <td><%= restaurante.fax %></td>
         <td><%= restaurante.señas %></td>
-	<% if current_user.id == restaurante.user_id %>
-        <td><%= link_to 'Editar', edit_restaurante_path(restaurante) %></td>
-        <td><%= link_to 'Eliminar', restaurante, method: :delete, data: { confirm: '¿Está seguro de que desea eliminar este restaurante?' } %></td>
+	
+	<% if user_signed_in? %> 
+		<% if current_user.id == restaurante.user_id %>
+			<td><%= link_to 'Editar Menú', rest_menu_path(restaurante) %></td>
+       			<td><%= link_to 'Editar', edit_restaurante_path(restaurante) %></td>
+       			<td><%= link_to 'Eliminar', restaurante, method: :delete, data: { confirm: '¿Está seguro de que desea eliminar este restaurante?' } %></td>
+		<% end %>
         <% end %>
 
       </tr>

@@ -42,7 +42,7 @@
   <p>
      Restaurante:
   </p>
-  <%= select(:producto, :restaurante_id, [[current_rest.nombre, current_rest.id]]) %>
+  <%= select(:producto, :restaurante_id, [[current_restP.nombre, current_restP.id]]) %>
 
   <div class="actions">
     <%= f.submit %>

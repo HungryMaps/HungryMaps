@@ -1,0 +1,5 @@
+module RestaurantesHelper
+	#def current_rest
+	#	current_rest = Restaurante.find(params[:id])
+	#end
+end

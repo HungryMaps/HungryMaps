@@ -1,0 +1,5 @@
+module ProductosHelper
+	def current_restP
+		current_restP = current_rest
+	end
+end

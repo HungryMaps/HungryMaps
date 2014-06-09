@@ -17,6 +17,7 @@
     <tr>
       <th>Producto</th>
       <th>Precio</th>
+      <th colspan="3"></th>
     </tr>
   </thead>
   <tbody>
@@ -25,6 +26,12 @@
       <tr>
         <td>  <%= m.nombre_producto %></td>
         <td><%= m.precio %> <br></td>
+	<% if user_signed_in? %> 
+		<% if current_user.id == @restaurante.user_id %>
+			<td><%= link_to 'Editar', platillo_edit_path(foo_param: m.id) %></td>
+			<td><%= link_to 'Eliminar', m, method: :delete, data: { confirm: '¿Está seguro de que desea eliminar este ?' } %></td>
+		<% end %>
+	<% end %>
       </tr>
     <% end %>
   </tbody>
@@ -33,9 +40,13 @@
 <br>
 <br>
 
-
 <p>
-  <%= link_to 'Orden', orden_path%>
+  <% if user_signed_in? %> 
+	<% if current_user.id == @restaurante.user_id %>
+		<%= link_to 'Agregar Platillo', platillo_path%>
+	<% end %>
+  <% end %>
+  <%= link_to 'Ordenar en este restaurante', orden_path%>
 </p>
 
 <br>
