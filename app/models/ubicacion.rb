@@ -2,7 +2,7 @@ class Ubicacion < ActiveRecord::Base
   has_many :restaurantes
   Restaurante.joins('INNER JOIN ubicacions ON restaurantes_id = ubicacions.restaurantes_id')
   
-def self.search_1(search)
+def self.search(search)
    if(Ubicacion.exists?(['provincia LIKE ?', "%#{search}%"]))  #1
    	where('provincia LIKE ?', "%#{search}%" )
    else
