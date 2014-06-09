@@ -12,8 +12,8 @@
       </a>
       <div class="nav-collapse">
         <ul class="nav">
-	<li><%= link_to 'HungryMaps', indice_path %></li> 
-	<li><%= link_to 'Restaurantes', restaurantes_path %></li>
+<li><%= link_to 'HungryMaps', indice_path %></li>
+<li><%= link_to 'Restaurantes', restaurantes_path %></li>
 <button type="button" class="btn btn-default navbar-btn"><li><%= link_to "Cerrar Sesión", destroy_user_session_path, method: :delete %></li> </button>
      
         </ul>
@@ -42,8 +42,8 @@
       </a>
       <div class="nav-collapse">
         <ul class="nav">
-	<li><%= link_to 'HungryMaps', indice_path %></li> 
-	<li><%= link_to 'Restaurantes', restaurantes_path %></li>
+<li><%= link_to 'HungryMaps', indice_path %></li>
+<li><%= link_to 'Restaurantes', restaurantes_path %></li>
 <button type="button" class="btn btn-default navbar-btn"><li><%=link_to "Inicia Sesión", new_user_session_path %></li> </button>
      
         </ul>
@@ -80,15 +80,9 @@
   <div><%= f.label :password_confirmation, "Confirmar Contraseña" %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
 
-  <div> Administrador: <%= f.check_box :tipo %> </div>
-
-  <br>
   <div><%= f.submit "Registrarse" %></div>
- 
 <% end %>
 
 <%= render "devise/shared/links" %>
 
 </center>
-
-
