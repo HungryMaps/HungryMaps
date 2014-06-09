@@ -10,11 +10,21 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :provincia %><br>
-    <%= f.text_field :provincia %>
+ 
+ <div class="field">
+  <% ubicacion = {
+     'San José' => 'San José',
+     'Alajuela' => 'Alajuela',
+     'Cartago' => 'Cartago',
+     'Heredia' => 'Heredia',
+     'Puntarenas' => 'Puntarenas',
+     'Guanacaste' => 'Guanacaste',
+     'Limón' => 'Limón',
+     } %>
+  <%= f.label :provincia %><br />
+  <%= f.select :provincia,ubicacion %>
   </div>
+
   <div class="field">
     <%= f.label :canton %><br>
     <%= f.text_field :canton %>
