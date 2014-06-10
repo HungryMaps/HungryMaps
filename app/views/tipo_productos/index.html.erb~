@@ -99,5 +99,4 @@
 
 <br>
 
-<%= link_to 'Nuevo Tipo producto', new_tipo_producto_path %>
 </center>

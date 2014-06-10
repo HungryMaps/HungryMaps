@@ -12,9 +12,13 @@
       </a>
       <div class="nav-collapse">
         <ul class="nav">
-<li><%= link_to 'HungryMaps', indice_path %></li>
-<li><%= link_to 'Restaurantes', restaurantes_path %></li>
-<li><%= link_to "Cerrar Sesión", destroy_user_session_path, method: :delete %></li>
+ 	<li class="divider-vertical"></li>       
+	<li><%= link_to 'HungryMaps', indice_path %></li> 
+	<li class="divider-vertical"></li>
+	<li><%= link_to 'Restaurantes', restaurantes_path %></li>
+	<li class="divider-vertical"></li>
+	<li><%= link_to "Cerrar Sesión", destroy_user_session_path, method: :delete %></li>
+	<li class="divider-vertical"></li>
      
         </ul>
       </div>
@@ -42,10 +46,15 @@
       </a>
       <div class="nav-collapse">
         <ul class="nav">
-<li><%= link_to 'HungryMaps', indice_path %></li>
-<li><%= link_to 'Restaurantes', restaurantes_path %></li>
-<li><%=link_to "Registrarse", new_user_registration_path %></li>
-<li><%=link_to "Inicia Sesión", new_user_session_path %></li>
+	<li class="divider-vertical"></li>
+	<li><%= link_to 'HungryMaps', indice_path %></li> 
+	<li class="divider-vertical"></li>
+	<li><%= link_to 'Restaurantes', restaurantes_path %></li>
+	<li class="divider-vertical"></li>
+	<li><%=link_to "Registrarse",  new_user_registration_path %></li>
+	<li class="divider-vertical"></li>
+	<li><%=link_to "Inicia Sesión", new_user_session_path %></li>
+	<li class="divider-vertical"></li>
      
         </ul>
       </div>
@@ -68,21 +77,14 @@
 
 
 <h1 style="text-align:center;">
+<p>&nbsp;</p>
 <%=image_tag ("hungrymaps.PNG")%>
+<p>&nbsp;</p>
 </h1>
+<h style="text-align:center">
+ <li><%= link_to 'Restaurantes', restaurantes_path %></li><br>
+ <li><%= link_to 'Búsqueda Restaurante Por Tipos de Comida', tipo_comidas_path %></li><br>
+ <li><%= link_to 'Búsqueda Restaurante Por Ubicacion', ubicacions_path %></li>
+</h> 
 
-<h2 style="font-family:arial; text-align:center; color:2DA90E">
-<%= link_to 'Restaurantes', restaurantes_path %> <br>
-</h2>
 
-<h2 style="text-align:center;" >
-<%= link_to 'Tipos de Comida', tipo_comidas_path %> <br>
-</h2>
-
-<h2 style="text-align:center;" >
-<%= link_to 'Tipos de Productos', tipo_productos_path %> <br>
-</h2>
-
-<h2 style="text-align:center;" >
-<%= link_to 'Ubicaciones', ubicacions_path %> <br>
-</h2>

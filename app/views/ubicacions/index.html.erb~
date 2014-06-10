@@ -109,5 +109,4 @@
 
 <br>
 
-<%= link_to 'Nueva Ubicacion', new_ubicacion_path %>
 </center>

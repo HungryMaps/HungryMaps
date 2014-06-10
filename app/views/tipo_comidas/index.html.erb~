@@ -107,6 +107,4 @@
 
 <br>
 
-<%= link_to 'Nuevo Tipo comida', new_tipo_comida_path %>
-
 </center>
