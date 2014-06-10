@@ -13,7 +13,6 @@ class RestaurantesController < ApplicationController
          format.html # index.html.erb
        end
     end
-   
   end
 
   def platillo_edit

@@ -43,10 +43,7 @@
 	  
   <%= select(:producto, :tipo_producto_id, a) %>
 
-  <p>
-     Restaurante:
-  </p>
-  <%= select(:producto, :restaurante_id, [[@restaurante.nombre_restaurante, @restaurante.id]]) %>
+  <%= f.hidden_field :restaurante_id, :value => @restaurante.id %>
 
   <div class="actions">
     <%= f.submit %>

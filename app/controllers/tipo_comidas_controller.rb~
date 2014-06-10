@@ -4,7 +4,14 @@ class TipoComidasController < ApplicationController
   # GET /tipo_comidas
   # GET /tipo_comidas.json
   def index
-    @tipo_comidas = TipoComida.all
+    if(@tipo_comidas = TipoComida.search(params[:searchbox]) == nil)
+       @tipo_comidas = TipoComida.all
+    else
+       @tipo_comidas = TipoComida.search(params[:searchbox])
+         respond_to do |format|
+         format.html # index.html.erb
+       end
+    end
   end
 
   # GET /tipo_comidas/1
@@ -49,6 +56,7 @@ class TipoComidasController < ApplicationController
         format.json { render json: @tipo_comida.errors, status: :unprocessable_entity }
       end
     end
+    redirect_to('/')
   end
 
   # DELETE /tipo_comidas/1

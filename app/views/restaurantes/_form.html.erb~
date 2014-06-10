@@ -37,7 +37,7 @@
   <% end %>
 
   <p>
-     <strong>Direccion:</strong> 
+     Direccion:
   </p>
   <%= select(:restaurante, :ubicacion_id, c) %>
 
@@ -62,10 +62,9 @@
     <%= f.text_field :señas %>
   </div>
   
-  <p>
-    Usuario
-  </p>
-  <%= select(:restaurante, :user_id, [[current_user.email, current_user.id]]) %>
+
+  <%= f.hidden_field :user_id, :value => current_user.id %>
+
 
   <div class="actions">
     <%= f.submit %>

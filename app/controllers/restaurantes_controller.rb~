@@ -18,6 +18,7 @@ class RestaurantesController < ApplicationController
 
   def platillo_edit
      @producto = Producto.find(params[:foo_param])
+     render 'platillo'
   end
 
   def platillo

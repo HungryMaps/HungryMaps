@@ -1,3 +1,7 @@
+<center>
+<br>
+<h1 style="color:green;">Nuevo Restaurante</h1>
+
 <%= form_for(@producto) do |f| %>
   <% if @producto.errors.any? %>
     <div id="error_explanation">
@@ -48,3 +52,5 @@
     <%= f.submit %>
   </div>
 <% end %>
+
+</center>
