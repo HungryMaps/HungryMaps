@@ -4,14 +4,7 @@ class TipoComidasController < ApplicationController
   # GET /tipo_comidas
   # GET /tipo_comidas.json
   def index
-    if(@tipo_comidas = TipoComida.search(params[:searchbox]) == nil)
-       @tipo_comidas = TipoComida.all
-    else
-       @tipo_comidas = TipoComida.search(params[:searchbox])
-         respond_to do |format|
-         format.html # index.html.erb
-       end
-    end
+    @tipo_comidas = TipoComida.all
   end
 
   # GET /tipo_comidas/1

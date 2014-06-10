@@ -14,7 +14,7 @@
         <ul class="nav">
 	<li><%= link_to 'HungryMaps', indice_path %></li> 
 	<li><%= link_to 'Restaurantes', restaurantes_path %></li>
-<button type="button" class="btn btn-default navbar-btn"><li><%= link_to "Cerrar Sesión", destroy_user_session_path, method: :delete %></li> </button>
+	<li><%= link_to "Cerrar Sesión", destroy_user_session_path, method: :delete %></li>
      
         </ul>
       </div>
@@ -44,9 +44,8 @@
         <ul class="nav">
 	<li><%= link_to 'HungryMaps', indice_path %></li> 
 	<li><%= link_to 'Restaurantes', restaurantes_path %></li>
-<button type="button" class="btn btn-default navbar-btn"><li><%=link_to "Registrarse",  new_user_registration_path %></li> </button>
-
-<button type="button" class="btn btn-default navbar-btn"><li><%=link_to "Inicia Sesión", new_user_session_path %></li> </button>
+	<li><%=link_to "Registrarse",  new_user_registration_path %></li>
+	<li><%=link_to "Inicia Sesión", new_user_session_path %></li>
      
         </ul>
       </div>
@@ -86,19 +85,26 @@
   </thead>
 
   <tbody>
+
+    <%= form_tag({:controller => "tipo_comidas", :action => "index"}, :method => :get) do %>
+    <%= label_tag(:tipo_comida, "Busqueda por tipo de comida") %>
+    <%= text_field_tag "searchbox", params[:searchbox] %>
+    <%= submit_tag("Buscar") %>
+    <% end %>
+
     <% @tipo_comidas.each do |tipo_comida| %>
       <tr>
         <td><%= tipo_comida.tipo_comida %></td>
-        <td><%= link_to 'Mostrar', tipo_comida %></td>
-        <td><%= link_to 'Editar', edit_tipo_comida_path(tipo_comida) %></td>
-        <td><%= link_to 'Eliminar', tipo_comida, method: :delete, data: { confirm: '¿Está seguro de que desea eliminar este tipo de comida?' } %></td>
+        <td>
+	<% tipo_comida.restaurantes.each do |r|%>
+	<div><%= link_to r.nombre_restaurante, restaurante_path(id: r.id) %> </div>
+	<% end %>
+	</td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'Nuevo Tipo comida', new_tipo_comida_path %>
 
 </center>

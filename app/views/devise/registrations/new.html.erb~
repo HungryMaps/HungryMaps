@@ -14,7 +14,7 @@
         <ul class="nav">
 <li><%= link_to 'HungryMaps', indice_path %></li>
 <li><%= link_to 'Restaurantes', restaurantes_path %></li>
-<button type="button" class="btn btn-default navbar-btn"><li><%= link_to "Cerrar Sesión", destroy_user_session_path, method: :delete %></li> </button>
+<li><%= link_to "Cerrar Sesión", destroy_user_session_path, method: :delete %></li>
      
         </ul>
       </div>
@@ -44,7 +44,8 @@
         <ul class="nav">
 <li><%= link_to 'HungryMaps', indice_path %></li>
 <li><%= link_to 'Restaurantes', restaurantes_path %></li>
-<button type="button" class="btn btn-default navbar-btn"><li><%=link_to "Inicia Sesión", new_user_session_path %></li> </button>
+<li><%=link_to "Inicia Sesión", new_user_session_path %></li>
+<li><%=link_to "Inicia Sesión", new_user_session_path %></li> 
      
         </ul>
       </div>

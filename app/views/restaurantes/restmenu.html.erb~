@@ -22,14 +22,15 @@
   </thead>
   <tbody>
 
-<% @restaurante.productos.each do |m| %>
+<% @restaurante.productos.joins(:tipo_producto).order('tipo_producto.tipo_producto').each do |m| %>
       <tr>
         <td>  <%= m.nombre_producto %></td>
-        <td><%= m.precio %> <br></td>
+        <td><%= m.precio %> </td>
+	<td><%= m.tipo_producto.tipo_producto %> </td>
 	<% if user_signed_in? %> 
 		<% if current_user.id == @restaurante.user_id %>
 			<td><%= link_to 'Editar', platillo_edit_path(foo_param: m.id) %></td>
-			<td><%= link_to 'Eliminar', m, method: :delete, data: { confirm: '¿Está seguro de que desea eliminar este ?' } %></td>
+			<td><%= link_to 'Eliminar', m, method: :delete, data: { confirm: '¿Está seguro de que desea eliminar este platillo?' } %></td>
 		<% end %>
 	<% end %>
       </tr>

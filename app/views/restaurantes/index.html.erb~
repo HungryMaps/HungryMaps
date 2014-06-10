@@ -44,9 +44,8 @@
         <ul class="nav">
 	<li><%= link_to 'HungryMaps', indice_path %></li> 
 	<li><%= link_to 'Restaurantes', restaurantes_path %></li>
-<button type="button" class="btn btn-default navbar-btn"><li><%=link_to "Registrarse",  new_user_registration_path %></li> </button>
-
-<button type="button" class="btn btn-default navbar-btn"><li><%=link_to "Inicia Sesión", new_user_session_path %></li> </button>
+	<li><%=link_to "Registrarse",  new_user_registration_path %></li>
+	<li><%=link_to "Inicia Sesión", new_user_session_path %></li>
      
         </ul>
       </div>
@@ -109,7 +108,7 @@
 	<% if user_signed_in? %> 
 		<% if current_user.id == restaurante.user_id %>
 			<td><%= link_to 'Editar Menú', rest_menu_path(restaurante) %></td>
-       			<td><%= link_to 'Editar', edit_restaurante_path(restaurante) %></td>
+       			<td><%= link_to 'Editar Restaurante', edit_restaurante_path(restaurante) %></td>
        			<td><%= link_to 'Eliminar', restaurante, method: :delete, data: { confirm: '¿Está seguro de que desea eliminar este restaurante?' } %></td>
 		<% end %>
         <% end %>
