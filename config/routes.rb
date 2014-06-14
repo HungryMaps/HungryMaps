@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :carritos
+
   devise_for :users
   resources :homes
 

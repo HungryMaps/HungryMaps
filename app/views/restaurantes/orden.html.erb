@@ -39,35 +39,5 @@
 <br>
 <br>
 
-<h3 style="color:green;">Este es su carrito de Compras</h3>
-
-<table class="myTable" style="width:500px">
-  <thead>
-    <tr>
-      <th>Producto</th>
-      <th>Precio</th>
-      <th>Cantidad</th>
-    </tr>
-  </thead>
-  <tbody>
-
-<% @restaurante.productos.each do |m| %>
-      <tr>
-        <td>  <%= m.nombre_producto %></td>
-        <td><%= m.precio %> <br></td>
-        <td>PonerCantidadAqui</td>
-     </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-<br>
-
-<p style="color:green;">Total de la venta:</p>
-
-<br>
-<br>
-
 <%= link_to 'Volver', @restaurante %> 
 </center>
