@@ -1,6 +1,7 @@
 class RestaurantesController < ApplicationController
-  before_action :set_restaurante, only: [:show, :edit, :update, :destroy, :restmenu, :carrito, :platillo, :platillo_edit]
-  before_action :authenticate_user!, only: [:orden, :edit, :update, :destroy, :new]
+  before_action :set_restaurante, only: [:show, :edit, :update, :destroy, :restmenu, :carrito, :platillo, :platillo_edit, :agregar]
+  before_action :authenticate_user!, only: [:carrito, :edit, :update, :destroy, :new]
+  before_action
 
   # GET /restaurantes
   # GET /restaurantes.json
@@ -28,19 +29,42 @@ class RestaurantesController < ApplicationController
   end
 
   def carrito
+    @orden = nil
+    for n in Orden.all 
+	if((n.user_id == current_user.id) and (n.restaurante_id == @restaurante.id) and (n.estado_id == 1))
+		@orden = Orden.find(n.id)
+	end
+    end
+ 
+    if(@orden == nil)
+	@orden = Orden.new(user_id: current_user.id, restaurante_id: @restaurante.id, productos: $products, precio: $precio, estado_id: 1)
+	@orden.save
+    end
+
     if(params[:Producto] != nil)
     	producto = Producto.find(params[:Producto])
     else
 	producto = Producto.new(nombre_producto: "", precio: 0)
     end 
-    $products += producto.nombre_producto+" "
-    $precio += producto.precio
+
+    @orden.productos += producto.nombre_producto+" "
+    @orden.precio += producto.precio
+    @orden.save
+
   end
 
   def agregar
-	#falta crear nueva orden con los datos
-	$products = ""
-	$precio = 0.0
+	for n in Orden.all 
+		if((n.user_id == current_user.id) and (n.restaurante_id == @restaurante.id) and (n.estado_id == 1))
+			@orden = Orden.find(n.id)
+		end
+        end
+	if(params[:cancelar]=="1")
+		@orden.destroy
+	else
+		@orden.estado_id = 2
+		@orden.save 
+	end	
 	redirect_to(restaurantes_path)
   end
 

@@ -41,15 +41,16 @@
   <tbody>
 
      <tr>	
-	<td> <%= $products %> </td>
-	<td> <%= $precio %> </td>
+	<td> <%= @orden.productos %> </td>
+	<td> <%= @orden.precio %> </td>
      </tr>
   </tbody>
 </table> 
 
 <br>
 
-<%= button_to "Fin", restaurantes_agregar_path, method: :post%>
+<%= button_to "Confirmar", agregar_path(cancelar: 0), method: :post%>
+<%= button_to "Cancelar", agregar_path(cancelar: 1), method: :post%>
 
 <br>
 <br>

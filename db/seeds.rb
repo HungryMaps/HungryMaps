@@ -6,6 +6,11 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+Estado.create(estado: "Definida")
+Estado.create(estado: "Enviada")
+Estado.create(estado: "Recibida")
+Estado.create(estado: "Terminada")
+
 TipoComida.create(tipo_comida: "Mexicana")
 TipoComida.create(tipo_comida: "Cubana")
 TipoComida.create(tipo_comida: "Tipica")
