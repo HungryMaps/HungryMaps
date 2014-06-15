@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class CarritoTest < ActiveSupport::TestCase
+class OrdenTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

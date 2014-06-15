@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :carritos
+  resources :ordens
 
   devise_for :users
   resources :homes
@@ -20,7 +20,11 @@ Rails.application.routes.draw do
 	
   get '/restaurantes/:id/platillo/edit' => 'restaurantes#platillo_edit', as: 'platillo_edit' 
 
-  get '/restaurantes/:id/orden' => 'restaurantes#orden', as: 'orden'
+  get '/restaurantes/:id/carrito' => 'restaurantes#carrito', as: 'carrito'
+
+  post '/restaurantes/:id/carrito' => 'restaurantes#carrito', as: 'ordenes'
+
+  post '/restaurantes/agregar'
 
   get '/' => 'homes#index', as: 'indice' 
 

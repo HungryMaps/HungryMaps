@@ -1,5 +1,5 @@
 class RestaurantesController < ApplicationController
-  before_action :set_restaurante, only: [:show, :edit, :update, :destroy, :restmenu, :orden, :platillo, :platillo_edit]
+  before_action :set_restaurante, only: [:show, :edit, :update, :destroy, :restmenu, :carrito, :platillo, :platillo_edit]
   before_action :authenticate_user!, only: [:orden, :edit, :update, :destroy, :new]
 
   # GET /restaurantes
@@ -27,7 +27,21 @@ class RestaurantesController < ApplicationController
   def restmenu
   end
 
-  def orden
+  def carrito
+    if(params[:Producto] != nil)
+    	producto = Producto.find(params[:Producto])
+    else
+	producto = Producto.new(nombre_producto: "", precio: 0)
+    end 
+    $products += producto.nombre_producto+" "
+    $precio += producto.precio
+  end
+
+  def agregar
+	#falta crear nueva orden con los datos
+	$products = ""
+	$precio = 0.0
+	redirect_to(restaurantes_path)
   end
 
   # GET /restaurantes/1

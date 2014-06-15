@@ -95,7 +95,7 @@
 
   <tbody>
   
-    <%= form_tag({:controller => "ubicacions", :action => "index"}, :method => :get) do %>
+    <%= form_tag(ubicacions_path, :method => :get) do %>
     <%= label_tag(:provincia, ":D Dime tu provincia, tu cantón o tu distrito :D") %>
     <%= text_field_tag "searchbox", params[:searchbox] %>
     <%= submit_tag("Buscar") %>

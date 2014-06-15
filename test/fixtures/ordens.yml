@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  restaurante_id: 1
+  productos: MyString
+  precio: 1.5
+  descripcion: MyString
+  fecha: 2014-06-15
+
+two:
+  user_id: 1
+  restaurante_id: 1
+  productos: MyString
+  precio: 1.5
+  descripcion: MyString
+  fecha: 2014-06-15

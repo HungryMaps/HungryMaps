@@ -27,7 +27,7 @@
 
 <%= form_tag(ordenes_path, :method => "post") do %>
     <%= select_tag(:Producto, options_for_select(a)) %>
-    <%= submit_tag "Agregar", confirm: "¿Seguro desea este platillo?" %>
+    <%= submit_tag "Agregar" %>
 <% end %>
 
 

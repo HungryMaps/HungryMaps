@@ -6,6 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+Restaurante.create(nombre_restaurante: "wat", telefono: 145665456, correo_electronico: "sdfsd", tipo_comida_id: 1, ubicacion_id: 1, user_id: 1, fax: "", señas: "")
 TipoComida.create(tipo_comida: "Mexicana")
 TipoComida.create(tipo_comida: "Cubana")
 TipoComida.create(tipo_comida: "Tipica")
@@ -269,7 +270,7 @@ Ubicacion.create(provincia:"Alajuela", canton:"Valverde Vega", distrito:"Rodríg
 
 Ubicacion.create(provincia:"Alajuela", canton:"Upala", distrito:"Upala")
 Ubicacion.create(provincia:"Alajuela", canton:"Upala", distrito:"Aguas Claras")
-Ubicacion.create(provincia:"Alajuela", canton:"Upala", distrito:"San José (pizote"))
+Ubicacion.create(provincia:"Alajuela", canton:"Upala", distrito:"San José (pizote)")
 Ubicacion.create(provincia:"Alajuela", canton:"Upala", distrito:"Bijagua")
 Ubicacion.create(provincia:"Alajuela", canton:"Upala", distrito:"Delicias")
 Ubicacion.create(provincia:"Alajuela", canton:"Upala", distrito:"Dos Ríos")

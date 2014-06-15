@@ -15,32 +15,40 @@
 .myTable td, .myTable th { text-align:center; padding:5px;border:1px solid #000; }
 </style>
 
+  <% a = [] %>
+  <% k = 0 %>
+  <% for n in @restaurante.productos %>
+  <% 	b = [] %>
+  <% 	b[0] = n.nombre_producto+" "+n.precio.to_s %>
+  <%    b[1] = n.id %>
+  <%    a[k] = b %>
+  <% 	k += 1 %>
+  <% end %>
+
+<%= form_tag(ordenes_path, :method => "post") do %>
+    <%= select_tag(:Producto, options_for_select(a)) %>
+    <%= submit_tag "Agregar", confirm: "¿Seguro desea este platillo?" %>
+<% end %>
+
 
 <table class="myTable" style="width:500px">
   <thead>
     <tr>
       <th>Producto</th>
       <th>Precio</th>
-      <th>Agregar</th>
     </tr>
   </thead>
   <tbody>
 
-<% @restaurante.productos.each do |m| %>
-      <tr>
-        <td>  <%= m.nombre_producto %></td>
-        <td><%= m.precio %> <br></td>
-        <td>Agregar</td>
+     <tr>	
+	<td> <%= $products %> </td>
      </tr>
-    <% end %>
   </tbody>
-</table>
+</table> 
 
 <br>
-<br>
 
-
-<p style="color:green;">Total de la venta:</p>
+<%= button_to "Fin", restaurantes_agregar_path, method: :post%>
 
 <br>
 <br>

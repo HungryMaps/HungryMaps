@@ -1,5 +1,8 @@
 module RestaurantesHelper
-	#def current_rest
-	#	current_rest = Restaurante.find(params[:id])
-	#end
+	def products
+		$products = ""	
+	end
+	def precio
+		$precio = 0.0	
+	end
 end

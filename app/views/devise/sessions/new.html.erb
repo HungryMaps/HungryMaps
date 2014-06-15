@@ -86,7 +86,8 @@
   <% if devise_mapping.rememberable? -%>
     <div><%= f.check_box :remember_me %> <%= f.label :remember_me, "Recordar mi cuenta" %></div>
   <% end -%>
-
+  <% $products = "" %>
+  <% $precio = 0 %>
   <div><%= f.submit "Iniciar Sesión" %></div>
 <% end %>
 

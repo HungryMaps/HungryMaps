@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @orden.user_id %>
+</p>
+
+<p>
+  <strong>Restaurante:</strong>
+  <%= @orden.restaurante_id %>
+</p>
+
+<p>
+  <strong>Productos:</strong>
+  <%= @orden.productos %>
+</p>
+
+<p>
+  <strong>Precio:</strong>
+  <%= @orden.precio %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @orden.descripcion %>
+</p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @orden.fecha %>
+</p>
+
+<%= link_to 'Edit', edit_orden_path(@orden) %> |
+<%= link_to 'Back', ordens_path %>

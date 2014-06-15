@@ -1,4 +1,5 @@
 class Restaurante < ActiveRecord::Base
+  has_many :ordens
   has_many :productos
   belongs_to :tipo_comida
   belongs_to :ubicacion

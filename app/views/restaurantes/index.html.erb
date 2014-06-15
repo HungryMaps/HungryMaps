@@ -99,7 +99,7 @@
 
   <tbody>
   
-  <%= form_tag({:controller => "restaurantes", :action => "index"}, :method => :get) do %>
+  <%= form_tag(restaurantes_path, :method => :get) do %>
 
     <%= text_field_tag "searchbox", params[:searchbox] %>
 
