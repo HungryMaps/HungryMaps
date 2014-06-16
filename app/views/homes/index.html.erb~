@@ -73,18 +73,79 @@
 
 <!--HASTA AQUI CUENTA DE USUARIO-->
 
-<body style="background-color:#FEFFE3;">
+<style>
+A.menulink {
+display: block;
+width: 198px;
+text-align: center;
+font-family:arial;
+font-size:17px;
+color: #000000;
+BORDER: none;
+border: solid 1px #FFFFFF;
+}
 
+A.menulink:hover {
+border: solid 1px #6100C1;
+font-size:18px;
+text-align: center;
+background-color:#F0E1FF;
+}
+
+A.tituloMenu{
+text-align: center;
+font-size:22px;
+}
+
+body
+{
+background-image:url('FondoPrincipal.jpg');
+background-color:#cccccc;
+}
+
+.ImageBorder
+{
+    border-width: 1px;
+    border-color: Black;
+} 
+
+</style>
+
+<script>
+
+/*
+CSS Menu highlight- By Marc Boussard (marc.boussard@syntegra.fr)
+Modified by DD for NS4 compatibility
+Visit http://www.dynamicdrive.com for this script
+*/
+
+var ns4class=''
+</script>
+
+<body style="background-color:#FEFFE3;">
 
 <h1 style="text-align:center;">
 <p>&nbsp;</p>
-<%=image_tag ("hungrymaps.PNG")%>
+<%=image_tag ("hungry.png")%>
 <p>&nbsp;</p>
 </h1>
 <h style="text-align:center">
- <li><%= link_to 'Restaurantes', restaurantes_path %></li><br>
- <li><%= link_to 'Búsqueda Restaurante Por Tipos de Comida', tipo_comidas_path %></li><br>
- <li><%= link_to 'Búsqueda Restaurante Por Ubicacion', ubicacions_path %></li>
+<center>
+<table border="0" width=198>
+  <tr>
+    <td width="100%" bgcolor="#E6E6E6"><b font-size:22px;>Realizar Búsquedas Por<b></td>
+  <tr>
+    <td width="100%"><a href="restaurantes" class="menulink" class=&{ns4class};>Restaurantes</a></td>
+  </tr>
+  <tr>
+    <td width="100%"><a href="tipo_comidas" class="menulink" class=&{ns4class};>Tipos de Comida</a></td>
+  </tr>
+  <tr>
+    <td width="100%"><a href="ubicacions" class="menulink" class==&{ns4class};>Ubicacion</a></td>
+  </tr>
+
+</table>
+</center>
 </h> 
 
 
