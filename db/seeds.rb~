@@ -13,7 +13,13 @@ Estado.create(estado: "Terminada")
 
 Restaurante.create(nombre_restaurante:"Rostipollos", telefono: 22680909, correo_electronico:"rostipollos@ayuda.com", fax: 22890909, tipo_comida_id: 1, señas: "De la iglesia 150mts norte", ubicacion_id: 12, user_id: 1)
 
-Restaurante.create(nombre_restaurante:"La casita", telefono: 23986534, correo_electronico:"laCasita@gmail.com", tipo_comida_id: 2, señas: "De la municipalidad, 550mts al oeste", ubicacion_id: 20, user_id: 2)
+Restaurante.create(nombre_restaurante:"La casita", telefono: 23986534, correo_electronico:"laCasita@gmail.com", tipo_comida_id: 2, señas: "De la municipalidad, 550mts al oeste", ubicacion_id: 20, user_id: 1)
+
+Restaurante.create(nombre_restaurante:"La parrilla de Pepe", telefono: 25980923, correo_electronico:"parrilaDePepe@gmail.com", tipo_comida_id: 3, señas: "Diagonal a la Iglesia", ubicacion_id: 30, user_id: 1)
+
+Restaurante.create(nombre_restaurante:"Antojitos", telefono: 27654398, correo_electronico:"antojitos@gmail.com", tipo_comida_id: 1, señas: "150mts de la Municipalidad", ubicacion_id: 40, user_id: 1)
+
+
 
 Producto.create(nombre_producto: "Casado", precio: 2500, descripcion: "Arroz, frijoles, ensalada y carne", tipo_producto_id: 3, restaurante_id: 1)
 

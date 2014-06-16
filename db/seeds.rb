@@ -11,7 +11,7 @@ Estado.create(estado: "Enviada")
 Estado.create(estado: "Recibida")
 Estado.create(estado: "Terminada")
 
-Restaurante.create(nombre_restaurante:"Rostipollos", telefono: 22680909, correo_electronico:"rostipollos@ayuda.com", fax: 22890909, tipo_comida_id: 1, señas: "De la iglesia 150mts norte", ubicacion_id: 12, user_id: 1)
+Restaurante.create(nombre_restaurante:"Rostipollos", telefono: 22680909, correo_electronico:"rostipollos@gmail.com", fax: 22890909, tipo_comida_id: 1, señas: "De la iglesia 150mts norte", ubicacion_id: 12, user_id: 1)
 
 Restaurante.create(nombre_restaurante:"La casita", telefono: 23986534, correo_electronico:"laCasita@gmail.com", tipo_comida_id: 2, señas: "De la municipalidad, 550mts al oeste", ubicacion_id: 20, user_id: 1)
 
@@ -19,12 +19,27 @@ Restaurante.create(nombre_restaurante:"La parrilla de Pepe", telefono: 25980923,
 
 Restaurante.create(nombre_restaurante:"Antojitos", telefono: 27654398, correo_electronico:"antojitos@gmail.com", tipo_comida_id: 1, señas: "150mts de la Municipalidad", ubicacion_id: 40, user_id: 1)
 
+Restaurante.create(nombre_restaurante:"Matices", telefono: 22348765, correo_electronico:"maticesmariscos@gmail.com", tipo_comida_id: 1, señas: "100 metros norte del BAC", ubicacion_id: 40, user_id: 1)
 
+Restaurante.create(nombre_restaurante:"Papata", telefono: 22871325, correo_electronico:"papata@gmail.com", tipo_comida_id: 2, señas: "En la Calle de la Amargura", ubicacion_id: 35, user_id: 1)
+
+Restaurante.create(nombre_restaurante:"Las Leñitas", telefono: 22768787, correo_electronico:"leñitas@gmail.com", tipo_comida_id: 3, señas: "Del Banco de Costa Rica 200 metro al este", ubicacion_id: 40, user_id: 1)
+
+Restaurante.create(nombre_restaurante:"Aroma Tico", telefono: 25762323, correo_electronico:"aromatico@gmail.com", tipo_comida_id: 3, señas: "Del ICE, 125 metros al oeste", ubicacion_id: 58, user_id: 1)
+
+Restaurante.create(nombre_restaurante:"FullHouse", telefono: 22578080, correo_electronico:"fullhouse@gmail.com", tipo_comida_id: 3, señas: "De Fuerza y Luz, 200 metros al sur", ubicacion_id: 57, user_id: 1)
+
+Restaurante.create(nombre_restaurante:"Genesis Burger", telefono: 22765555, correo_electronico:"genesisburger@gmail.com", tipo_comida_id: 1, señas: "De la Iglesia 500 metros al este", ubicacion_id: 87, user_id: 1)
+
+Restaurante.create(nombre_restaurante:"La Cabaña", telefono: 26890707, correo_electronico:"cabaña@gmail.com", tipo_comida_id: 3, señas: "Del EBAIS 400 norte", ubicacion_id: 84, user_id: 1)
+
+Restaurante.create(nombre_restaurante:"Misheladas", telefono: 22354040, correo_electronico:"misheladas@gmail.com", tipo_comida_id: 4, señas: "Del Banco Popular 175 metros al oeste", ubicacion_id: 44, user_id: 1)
 
 Producto.create(nombre_producto: "Casado", precio: 2500, descripcion: "Arroz, frijoles, ensalada y carne", tipo_producto_id: 3, restaurante_id: 1)
 
 Producto.create(nombre_producto: "5 Piezas de pollo", precio: 3500, descripcion: "Crispy", tipo_producto_id: 3, restaurante_id: 1)
 
+Producto.create(nombre_producto: "Spaguettis a la Carbonara", precio: 2500, descripcion: "Arroz, frijoles, ensalada y carne", tipo_producto_id: 3, restaurante_id: 1)
 
 
 TipoComida.create(tipo_comida: "Mexicana")
