@@ -6,10 +6,26 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+Estado.create(estado: "Definida")
+Estado.create(estado: "Enviada")
+Estado.create(estado: "Recibida")
+Estado.create(estado: "Terminada")
+
+Restaurante.create(nombre_restaurante:"Rostipollos", telefono: 22680909, correo_electronico:"rostipollos@ayuda.com", fax: 22890909, tipo_comida_id: 1, señas: "De la iglesia 150mts norte", ubicacion_id: 12, user_id: 1)
+
+Restaurante.create(nombre_restaurante:"La casita", telefono: 23986534, correo_electronico:"laCasita@gmail.com", tipo_comida_id: 2, señas: "De la municipalidad, 550mts al oeste", ubicacion_id: 20, user_id: 2)
+
+Producto.create(nombre_producto: "Casado", precio: 2500, descripcion: "Arroz, frijoles, ensalada y carne", tipo_producto_id: 3, restaurante_id: 1)
+
+Producto.create(nombre_producto: "5 Piezas de pollo", precio: 3500, descripcion: "Crispy", tipo_producto_id: 3, restaurante_id: 1)
+
+
+
 TipoComida.create(tipo_comida: "Mexicana")
 TipoComida.create(tipo_comida: "Cubana")
 TipoComida.create(tipo_comida: "Tipica")
 TipoComida.create(tipo_comida: "Pizzeria")
+
 TipoProducto.create(tipo_producto: "Bebida")
 TipoProducto.create(tipo_producto: "Postre")
 TipoProducto.create(tipo_producto: "Almuerzo")

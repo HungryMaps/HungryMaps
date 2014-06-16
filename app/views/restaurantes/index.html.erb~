@@ -92,14 +92,14 @@
       <th>Telefono</th>
       <th>Correo electronico</th>
       <th>Fax</th>
-      <th>Señas</th>
+      <th width:900px >Señas</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
   
-  <%= form_tag({restaurantes_path, :method => :get) do %>
+  <%= form_tag(restaurantes_path, :method => :get) do %>
 
     <%= text_field_tag "searchbox", params[:searchbox] %>
 
