@@ -91,8 +91,9 @@
 <center>
 <br>
 <br>
-<h1>Lista de Ubicaciones</h1>
+<h1>Lista Orden</h1>
 <br>
+
 <style type="text/css">
 .myTable { background-color:#eee;border-collapse:collapse; }
 .myTable th { background-color:#45A91A;color:white;width:50%; }
@@ -100,30 +101,33 @@
 </style>
 
 <table class="myTable" style="width:700px">
+
+
+<table>
   <thead>
     <tr>
-      <th>Dirección</th>
+      <th>User</th>
       <th>Restaurante</th>
+      <th>Productos</th>
+      <th>Precio</th>
+      <th>Descripcion</th>
+      <th>Fecha</th>
+      <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
-  
-    <%= form_tag(ubicacions_path, :method => :get) do %>
-    <%= label_tag(:provincia, ":D Dime tu provincia, tu cantón o tu distrito :D") %>
-    <%= text_field_tag "searchbox", params[:searchbox] %>
-    <%= submit_tag("Buscar") %>
-    <% end %>
-  
-
-    <% @ubicacions.each do |ubicacion| %>
+    <% @ordens.each do |orden| %>
       <tr>
-        <td><%= ubicacion.provincia+" "+ubicacion.canton+" "+ubicacion.distrito %></td>
-        <td>
-	<% ubicacion.restaurantes.each do |r|%>
-	<div><%= link_to r.nombre_restaurante, restaurante_path(id: r.id) %> </div>
-	<% end %>
-	</td>
+        <td><%= orden.user_id %></td>
+        <td><%= orden.restaurante_id %></td>
+        <td><%= orden.productos %></td>
+        <td><%= orden.precio %></td>
+        <td><%= orden.descripcion %></td>
+        <td><%= orden.fecha %></td>
+        <td><%= link_to 'Show', orden %></td>
+        <td><%= link_to 'Edit', edit_orden_path(orden) %></td>
+        <td><%= link_to 'Destroy', orden, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -131,4 +135,4 @@
 
 <br>
 
-</center>
+<%= link_to 'New Orden', new_orden_path %>

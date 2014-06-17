@@ -92,7 +92,7 @@
       <th>Telefono</th>
       <th>Correo electronico</th>
       <th>Fax</th>
-      <th width:900px >Señas</th>
+      <th>Señas</th>
       <th colspan="3"></th>
     </tr>
   </thead>

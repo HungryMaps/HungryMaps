@@ -13,12 +13,21 @@
       <div class="nav-collapse">
         <ul class="nav">
  	<li class="divider-vertical"></li>       
-	<li><%= link_to 'HungryMaps', indice_path %></li> 
+        <li><h4><%= link_to 'HungryMaps', indice_path %></h4></li> 
 	<li class="divider-vertical"></li>
 	<li><%= link_to 'Restaurantes', restaurantes_path %></li>
 	<li class="divider-vertical"></li>
-	<li><%= link_to "Cerrar Sesión", destroy_user_session_path, method: :delete %></li>
-	<li class="divider-vertical"></li>
+  	
+	<li class="dropdown pull-right">
+         <a href="#" data-toggle="dropdown" class="dropdown-toggle"><%= current_user.email %><b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><%= link_to "Cerrar Sesión", destroy_user_session_path, method: :delete %></li>
+            <li><a href="#">Another action</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Soporte</a></li>
+          </ul>
+       </li>
+      
      
         </ul>
       </div>
@@ -28,7 +37,6 @@
  
 <p class='notice'><% notice%></p>
 <p class='alert'><% alert%></p>
-<p>Bienvenido <%= current_user.email %></p>
 <%= yield %>
 
 </body>
@@ -51,10 +59,16 @@
 	<li class="divider-vertical"></li>
 	<li><%= link_to 'Restaurantes', restaurantes_path %></li>
 	<li class="divider-vertical"></li>
-	<li><%=link_to "Registrarse",  new_user_registration_path %></li>
-	<li class="divider-vertical"></li>
-	<li><%=link_to "Inicia Sesión", new_user_session_path %></li>
-	<li class="divider-vertical"></li>
+	
+	<li class="dropdown pull-right">
+         <a href="#" data-toggle="dropdown" class="dropdown-toggle">Cuenta <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><%=link_to "Inicia Sesión", new_user_session_path %></li>
+            <li><%=link_to "Registrarse",  new_user_registration_path %></li>
+            <li class="divider"></li>
+            <li><a href="#">Soporte</a></li>
+          </ul>
+       </li>
      
         </ul>
       </div>
@@ -72,6 +86,7 @@
 <%end%>
 
 <!--HASTA AQUI CUENTA DE USUARIO-->
+
 <center>
 <br>
 <h1 style="color:green;" >Iniciar Sesión</h1>

@@ -95,11 +95,12 @@
 
   <tbody>
 
-    <%= form_tag({:controller => "tipo_comidas", :action => "index"}, :method => :get) do %>
+    <%= form_tag(tipo_comidas_path, :method => :get) do %>
     <%= label_tag(:tipo_comida, "Busqueda por tipo de comida") %>
     <%= text_field_tag "searchbox", params[:searchbox] %>
-    <%= submit_tag("Buscar") %>
-    <% end %>
+<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span> Buscar</button>
+        <% end %>
+
 
     <% @tipo_comidas.each do |tipo_comida| %>
       <tr>

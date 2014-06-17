@@ -12,9 +12,13 @@
       </a>
       <div class="nav-collapse">
         <ul class="nav">
-<li><%= link_to 'HungryMaps', indice_path %></li>
-<li><%= link_to 'Restaurantes', restaurantes_path %></li>
-<li><%= link_to "Cerrar Sesión", destroy_user_session_path, method: :delete %></li>
+ 	<li class="divider-vertical"></li>       
+	<li><%= link_to 'HungryMaps', indice_path %></li> 
+	<li class="divider-vertical"></li>
+	<li><%= link_to 'Restaurantes', restaurantes_path %></li>
+	<li class="divider-vertical"></li>
+	<li><%= link_to "Cerrar Sesión", destroy_user_session_path, method: :delete %></li>
+	<li class="divider-vertical"></li>
      
         </ul>
       </div>
@@ -42,10 +46,15 @@
       </a>
       <div class="nav-collapse">
         <ul class="nav">
-<li><%= link_to 'HungryMaps', indice_path %></li>
-<li><%= link_to 'Restaurantes', restaurantes_path %></li>
-<li><%=link_to "Registrarse", new_user_registration_path %></li>
-<li><%=link_to "Inicia Sesión", new_user_session_path %></li> 
+	<li class="divider-vertical"></li>
+	<li><%= link_to 'HungryMaps', indice_path %></li> 
+	<li class="divider-vertical"></li>
+	<li><%= link_to 'Restaurantes', restaurantes_path %></li>
+	<li class="divider-vertical"></li>
+	<li><%=link_to "Registrarse",  new_user_registration_path %></li>
+	<li class="divider-vertical"></li>
+	<li><%=link_to "Inicia Sesión", new_user_session_path %></li>
+	<li class="divider-vertical"></li>
      
         </ul>
       </div>
@@ -63,6 +72,7 @@
 <%end%>
 
 <!--HASTA AQUI CUENTA DE USUARIO-->
+
 <h2>Resend unlock instructions</h2>
 
 <%= form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f| %>
