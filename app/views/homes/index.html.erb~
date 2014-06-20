@@ -24,7 +24,7 @@
             <li><%= link_to "Cerrar Sesión", destroy_user_session_path, method: :delete %></li>
             <li><a href="#">Another action</a></li>
             <li class="divider"></li>
-            <li><a href="#">Settings</a></li>
+            <li><a href="#">Soporte</a></li>
           </ul>
        </li>
       
