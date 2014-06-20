@@ -31,7 +31,7 @@ class RestaurantesController < ApplicationController
   def carrito
     @orden = nil
     for n in Orden.all 
-	if((n.user_id == current_user.id) and (n.restaurante_id == @restaurante.id) and (n.estado_id == 0))
+	if((n.user_id == current_user.id) and (n.restaurante_id == @restaurante.id) and (n.estado_id == 1))
 		@orden = Orden.find(n.id)
 	end
     end

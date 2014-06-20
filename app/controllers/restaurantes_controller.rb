@@ -21,6 +21,14 @@ class RestaurantesController < ApplicationController
      render 'platillo'
   end
 
+##votos
+def upvote
+  @restaurantes = Restaurante.find(params[:id])
+  @restaurantes.votes.create
+  redirect_to(restaurantes_path)
+end
+###
+
   def platillo
      @producto = Producto.new
   end

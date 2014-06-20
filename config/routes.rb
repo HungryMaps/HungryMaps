@@ -14,7 +14,11 @@ Rails.application.routes.draw do
 
   resources :productos
 
-  resources :restaurantes
+  resources :restaurantes do
+    member do
+      post 'upvote'
+    end
+end
 
   get '/restaurantes/:id/menu' => 'restaurantes#restmenu', as: 'rest_menu'  
 	
