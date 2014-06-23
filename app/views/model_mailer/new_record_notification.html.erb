@@ -1,7 +1,23 @@
-<h1>ModelMailer#new_record_notification</h1>
+<h1>¡Gracias por ordenar con Hungry Maps!</h1>
 
 <p>
-  <%= @orden.precio %>, find me in app/views/model_mailer/new_record_notification.html.erb
 
+Ordenó en el Restaurante: <%= @orden.restaurante.id %>
 
 </p>
+
+<br>
+
+<p>
+
+Los productos que ordenó: <%= @orden.productos %>
+
+</p>
+<br>
+
+<p>
+Y el total de la orden es: <%= @orden.precio %>
+
+</p>
+
+<h2>¡Provecho!</h2>

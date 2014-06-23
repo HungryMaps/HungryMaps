@@ -8,7 +8,7 @@ class ModelMailer < ActionMailer::Base
   #
   def new_record_notification(orden, current_user)
   @orden = orden
-  mail to: current_user.email , subject: "Success! You did it."
+  mail to: current_user.email , subject: "Orden con HungryMaps"
 end
 
 end
