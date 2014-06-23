@@ -21,6 +21,14 @@ class RestaurantesController < ApplicationController
      render 'platillo'
   end
 
+##votos
+def upvote
+  @restaurantes = Restaurante.find(params[:id])
+  @restaurantes.votes.create
+  redirect_to(restaurantes_path)
+end
+###
+
   def platillo
      @producto = Producto.new
   end
@@ -64,6 +72,8 @@ class RestaurantesController < ApplicationController
 	else
 		@orden.estado_id = 2
 		@orden.save 
+          ModelMailer.new_record_notification(@orden).deliver
+
 	end	
 	redirect_to(restaurantes_path)
   end

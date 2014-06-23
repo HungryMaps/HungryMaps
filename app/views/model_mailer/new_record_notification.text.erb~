@@ -1,0 +1,11 @@
+ModelMailer#new_record_notification
+
+<p>
+Hi,
+
+A new record has been added: <%= @record.name %>
+
+Thanks
+</p>
+
+<%= @greeting %>, find me in app/views/model_mailer/new_record_notification.text.erb

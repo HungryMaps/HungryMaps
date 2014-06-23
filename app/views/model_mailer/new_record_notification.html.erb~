@@ -1,0 +1,7 @@
+<h1>ModelMailer#new_record_notification</h1>
+
+<p>
+  <%= @record.precio %>, find me in app/views/model_mailer/new_record_notification.html.erb
+
+
+</p>

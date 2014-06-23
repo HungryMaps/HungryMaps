@@ -72,6 +72,8 @@ end
 	else
 		@orden.estado_id = 2
 		@orden.save 
+          ModelMailer.new_record_notification(@orden, current_user).deliver
+
 	end	
 	redirect_to(restaurantes_path)
   end
