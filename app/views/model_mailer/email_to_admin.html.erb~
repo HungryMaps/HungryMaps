@@ -1,23 +1,33 @@
-<h1>¡Gracias por ordenar con Hungry Maps!</h1>
+<h1>¡Una orden enviada con Hungry Maps!</h1>
 
 <p>
+Información del Cliente: <%= @orden.user.email %>
+<p>
 
-Ordenó en el Restaurante: <%= @orden.restaurante.nombre_restaurante %>
+<br>
 
+<p>
+Orden para el Restaurante: <%= @orden.restaurante.nombre_restaurante %>
 </p>
 
 <br>
 
 <p>
+Los productos pedidos: <%= @orden.productos %>
+</p>
+<br>
 
-Los productos que ordenó: <%= @orden.productos %>
-
+<p>
+Detalles del Pedido: 
+<br>
+<%= @orden.fecha %>
+<br>
+<%= @orden.descripcion %>
 </p>
 <br>
 
 <p>
 Y el total de la orden es: <%= @orden.precio %>
-
 </p>
 
 <h2>¡Provecho!</h2>

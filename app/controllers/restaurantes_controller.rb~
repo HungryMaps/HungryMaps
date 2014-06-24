@@ -28,7 +28,7 @@ class RestaurantesController < ApplicationController
 ##votos
 def upvote
   @restaurante = Restaurante.find(params[:id])
-  num = @restaurante.votes.group(:user_id).where(user_id: current_user.id).count
+  num = @restaurante.votes.where(user_id: current_user.id).count
   if num == 0
     @restaurante.votes.create(user_id: current_user.id)
   end
