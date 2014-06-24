@@ -33,6 +33,15 @@ def upvote
 end
 ###
 
+##votos
+def dislike
+  @restaurantes = Restaurante.find(params[:id])
+  @restaurantes.votes.create
+  redirect_to(restaurantes_path)
+end
+###
+
+
   def platillo
      @producto = Producto.new
   end

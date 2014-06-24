@@ -129,8 +129,10 @@
         <td><%= restaurante.correo_electronico %></td>
         <td><%= restaurante.fax %></td>
         <td><%= restaurante.señas %></td>
-        <td><%= pluralize(restaurante.votes.count, "Like") %></td>
-        <td><%= button_to 'Like', upvote_restaurante_path(restaurante), method: :post %></td>
+   <td><%= button_to 'Like', upvote_restaurante_path(restaurante), method: :post %><%= pluralize(restaurante.votes.count, "Like") %></td> 
+   <td><%= button_to 'Dislike', dislike_restaurante_path(restaurante), method: :poste %><%= pluralize(restaurante.votes.count, "dislike") %></td>     
+       
+  
 	
 	<% if user_signed_in? %> 
 		<% if current_user.id == restaurante.user_id %>
@@ -149,7 +151,6 @@
 <% if user_signed_in? %>   
 	<% if current_user.tipo == "1"%>
     		<%= link_to 'Nuevo Restaurante', new_restaurante_path %>
-		<%= link_to 'Solicitudes de Ordenes', solicitudes_path %>
 	<% end %>
 	<%= link_to 'Sus Ordenes', ordens_path %>
 <% end %>

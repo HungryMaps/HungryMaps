@@ -17,7 +17,6 @@ class RestaurantesController < ApplicationController
   end
 
   def solicitud
-    session[:return_to] ||= request.referer
     @ordens = Orden.all 
   end
 

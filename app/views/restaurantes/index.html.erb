@@ -129,8 +129,10 @@
         <td><%= restaurante.correo_electronico %></td>
         <td><%= restaurante.fax %></td>
         <td><%= restaurante.señas %></td>
-        <td><%= pluralize(restaurante.votes.count, "Like") %></td>
-        <td><%= button_to 'Like', upvote_restaurante_path(restaurante), method: :post %></td>
+        <td><%= button_to 'Like', upvote_restaurante_path(restaurante), method: :post %><%= pluralize(restaurante.votes.count, "Like") %></td> 
+    
+       
+  
 	
 	<% if user_signed_in? %> 
 		<% if current_user.id == restaurante.user_id %>
