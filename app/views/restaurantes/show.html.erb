@@ -44,5 +44,12 @@
   <%= link_to 'Vea El Menu', rest_menu_path%>
 </p>
 
+<p>
+  <% if current_user.id == @restaurante.user.id %>
+	<%= link_to 'Solicitudes de Ordenes', solicitudes_path %>
+  <% end %>
+</p>
+
 <%= link_to 'Volver', restaurantes_path %>
+
 </center>

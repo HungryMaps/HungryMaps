@@ -30,6 +30,11 @@
     <%= submit_tag "Agregar", data: { confirm: '¿Está seguro de que desea agregar este platillo?' } %>
 <% end %>
 
+<%= form_tag(ordenes_path, :method => "post") do %>
+    <%= text_area_tag :Descripcion, "Detalles del pedido" %>
+    <%= submit_tag "Agregar Descripción" %>
+<% end %>
+
 
 <table class="myTable" style="width:500px">
   <thead>
@@ -49,8 +54,8 @@
 
 <br>
 
-<%= button_to "Confirmar", agregar_path(cancelar: false), method: :post%>
-<%= button_to "Cancelar", agregar_path(cancelar: true), method: :post%>
+<%= button_to "Confirmar", agregar_path(cancelar: 0), method: :post%>
+<%= button_to "Cancelar", agregar_path(cancelar: 1), method: :post%>
 
 <br>
 <br>

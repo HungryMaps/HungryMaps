@@ -2,7 +2,7 @@
 
 <p>
 
-Ordenó en el Restaurante: <%= @orden.restaurante.nombre %>
+Ordenó en el Restaurante: <%= @orden.restaurante.id %>
 
 </p>
 

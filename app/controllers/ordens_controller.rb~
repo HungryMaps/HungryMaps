@@ -10,7 +10,6 @@ class OrdensController < ApplicationController
   # GET /ordens/1
   # GET /ordens/1.json
   def show
-	session[:return_to] ||= request.referer
 	redirect_to session.delete(:return_to)
   end
 

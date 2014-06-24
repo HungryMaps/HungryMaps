@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+ 
   resources :estados
 
   resources :ordens
@@ -31,6 +32,8 @@ end
   post '/restaurantes/:id/carrito' => 'restaurantes#carrito', as: 'ordenes'
 
   post '/restaurantes/:id/agregar' => 'restaurantes#agregar', as: 'agregar'
+
+  get '/restaurantes/:id/solicitud' => 'restaurantes#solicitud', as: 'solicitudes'
 
   get '/' => 'homes#index', as: 'indice' 
 

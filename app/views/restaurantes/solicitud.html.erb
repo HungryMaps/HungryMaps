@@ -91,8 +91,9 @@
 <center>
 <br>
 <br>
-<h1>Lista de Restaurantes</h1>
+<h1>Ordenes Solicitadas</h1>
 <br>
+
 <style type="text/css">
 .myTable { background-color:#eee;border-collapse:collapse; }
 .myTable th { background-color:#45A91A;color:white;width:50%; }
@@ -100,57 +101,56 @@
 </style>
 
 <table class="myTable" style="width:700px">
+
+
+<table>
   <thead>
     <tr>
-      <th>Nombre restaurante</th>
-      <th>Telefono</th>
-      <th>Correo electronico</th>
-      <th>Fax</th>
-      <th>Señas</th>
-      <th></th>
-      <th></th>
-      <th colspan="3"></th>
+      <th>Restaurante</th>
+      <th>Productos</th>
+      <th>Precio</th>
+      <th>Descripcion</th>
+      <th>Fecha</th>
+      <th>Estado</th>
+      <th>Cambiar Estado</th>
     </tr>
   </thead>
 
   <tbody>
-  
-  <%= form_tag(restaurantes_path, :method => :get) do %>
+    <% @ordens.each do |orden| %>
 
-    <%= text_field_tag "searchbox", params[:searchbox] %>
-
-    <%= submit_tag "Buscar", :nombre_restaurante => nil %>
-
-<% end %>
-    <% @restaurantes.each do |restaurante| %>
-      <tr>
-        <td><%= link_to restaurante.nombre_restaurante, restaurante %></td>
-        <td><%= restaurante.telefono %></td>
-        <td><%= restaurante.correo_electronico %></td>
-        <td><%= restaurante.fax %></td>
-        <td><%= restaurante.señas %></td>
-        <td><%= pluralize(restaurante.votes.count, "Like") %></td>
-        <td><%= button_to 'Like', upvote_restaurante_path(restaurante), method: :post %></td>
-	
-	<% if user_signed_in? %> 
-		<% if current_user.id == restaurante.user_id %>
-			<td><%= link_to 'Editar Menú', rest_menu_path(restaurante) %></td>
-       			<td><%= link_to 'Editar Restaurante', edit_restaurante_path(restaurante) %></td>
-       			<td><%= link_to 'Eliminar', restaurante, method: :delete, data: { confirm: '¿Está seguro de que desea eliminar este restaurante?' } %></td>
-		<% end %>
-        <% end %>
-
-      </tr>
+    	<% if user_signed_in? %> 
+		<% if current_user.id == orden.restaurante.user_id && orden.restaurante.id == @restaurante.id %>
+		      <tr>
+			<td><%= orden.restaurante.nombre_restaurante %></td>
+			<td><%= orden.productos %></td>
+			<td><%= orden.precio %></td>
+			<td><%= orden.descripcion %></td>
+			<td><%= orden.fecha %></td>
+			<td><%= orden.estado.estado %></td>
+			<td>
+				<% a = [] %>
+				<% k = 0 %>
+				<% for n in Estado.all %>
+				<% 	b = [] %>
+				<% 	b[0] = n.estado %>
+				<%      b[1] = n.id %>
+				<%      a[k] = b %>
+				<% 	k += 1 %>
+				<% end %>
+				
+				<%= form_for(orden) do |f|%>
+				  <%= f.select(:estado_id, options_for_select(a)) %>
+				  <%= submit_tag "Cambiar Estado"%>
+				<% end %>
+			</td>
+		      </tr>     
+		<%end%>
+       <% end %>
     <% end %>
   </tbody>
 </table>
 
 <br>
-<% if user_signed_in? %>   
-	<% if current_user.tipo == "1"%>
-    		<%= link_to 'Nuevo Restaurante', new_restaurante_path %>
-	<% end %>
-	<%= link_to 'Sus Ordenes', ordens_path %>
-<% end %>
 
 </center>

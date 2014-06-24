@@ -30,12 +30,18 @@
     <%= submit_tag "Agregar", data: { confirm: '¿Está seguro de que desea agregar este platillo?' } %>
 <% end %>
 
+<%= form_tag(ordenes_path, :method => "post") do %>
+    <%= text_area_tag :Descripcion, "Detalles del pedido" %>
+    <%= submit_tag "Agregar Descripción" %>
+<% end %>
+
 
 <table class="myTable" style="width:500px">
   <thead>
     <tr>
       <th>Producto</th>
       <th>Precio</th>
+      <th>Detalles del pedido</th>
     </tr>
   </thead>
   <tbody>
@@ -43,6 +49,7 @@
      <tr>	
 	<td> <%= @orden.productos %> </td>
 	<td> <%= @orden.precio %> </td>
+	<td> <%= @orden.descripcion %> </td>
      </tr>
   </tbody>
 </table> 

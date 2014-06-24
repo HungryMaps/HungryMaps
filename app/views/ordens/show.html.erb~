@@ -1,39 +1,28 @@
+<center>
 <p id="notice"><%= notice %></p>
+<br>
+
+<h1 style="color:green;">Restaurante</h1>
 
 <p>
-  <strong>User:</strong>
-  <%= @orden.user_id %>
+
+<% a = [] %>
+<% k = 0 %>
+<% for n in Estado.all %>
+<% 	b = [] %>
+<% 	b[0] = n.estado %>
+<%      b[1] = n.id %>
+<%      a[k] = b %>
+<% 	k += 1 %>
+<% end %>
+
+<%= form_tag(cambio_path(orden.id => params[:ident]), :method => "post") do %>
+  <%= select_tag(:status, options_for_select(a)) %>
+  <%= submit_tag "Cambiar Estado"%>
+<% end %>
+
 </p>
 
-<p>
-  <strong>Restaurante:</strong>
-  <%= @orden.restaurante_id %>
-</p>
+<%= link_to 'Volver', restaurantes_path %>
 
-<p>
-  <strong>Productos:</strong>
-  <%= @orden.productos %>
-</p>
-
-<p>
-  <strong>Precio:</strong>
-  <%= @orden.precio %>
-</p>
-
-<p>
-  <strong>Descripcion:</strong>
-  <%= @orden.descripcion %>
-</p>
-
-<p>
-  <strong>Fecha:</strong>
-  <%= @orden.fecha %>
-</p>
-
-<p>
-  <strong>Estado:</strong>
-  <%= @orden.estado %>
-</p>
-
-<%= link_to 'Edit', edit_orden_path(@orden) %> |
-<%= link_to 'Back', ordens_path %>
+</center>
