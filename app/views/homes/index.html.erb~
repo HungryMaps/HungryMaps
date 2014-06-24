@@ -90,18 +90,19 @@
 <style>
 A.menulink {
 display: block;
-width: 198px;
+width: 450px;
 text-align: center;
 font-family:arial;
-font-size:17px;
+font-size:30px;
 color: #000000;
 BORDER: none;
 border: solid 1px #FFFFFF;
+padding:27px;
 }
 
 A.menulink:hover {
 border: solid 1px #6100C1;
-font-size:18px;
+font-size:40px;
 text-align: center;
 background-color:#F0E1FF;
 }

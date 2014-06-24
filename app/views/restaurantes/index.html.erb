@@ -13,7 +13,7 @@
       <div class="nav-collapse">
         <ul class="nav">
  	<li class="divider-vertical"></li>       
-        <li><h4><%= link_to 'HungryMaps', indice_path %></h4></li> 
+        <li><%= link_to 'HungryMaps', indice_path %></li> 
 	<li class="divider-vertical"></li>
 	<li><%= link_to 'Restaurantes', restaurantes_path %></li>
 	<li class="divider-vertical"></li>
@@ -22,23 +22,23 @@
          <a href="#" data-toggle="dropdown" class="dropdown-toggle"><%= current_user.email %><b class="caret"></b></a>
           <ul class="dropdown-menu">
             <li><%= link_to "Cerrar Sesión", destroy_user_session_path, method: :delete %></li>
-            <li><a href="#">Another action</a></li>
             <li class="divider"></li>
-            <li><a href="#">Soporte</a></li>
+	    <center>
+	    <button class="btn btn-link" data-toggle="modal" data-target="#myModal"></li>
+	     Soporte 
+	    </button>
+	    </center>
           </ul>
-       </li>
-      
-     
-        </ul>
+        </li>
+
+       </ul>
       </div>
     </div>
   </div>
-</div>
- 
+</div> 
 <p class='notice'><% notice%></p>
 <p class='alert'><% alert%></p>
 <%= yield %>
-
 </body>
 
 <% else%>
@@ -59,23 +59,24 @@
 	<li class="divider-vertical"></li>
 	<li><%= link_to 'Restaurantes', restaurantes_path %></li>
 	<li class="divider-vertical"></li>
-	
 	<li class="dropdown pull-right">
          <a href="#" data-toggle="dropdown" class="dropdown-toggle">Cuenta <b class="caret"></b></a>
           <ul class="dropdown-menu">
             <li><%=link_to "Inicia Sesión", new_user_session_path %></li>
             <li><%=link_to "Registrarse",  new_user_registration_path %></li>
             <li class="divider"></li>
-            <li><a href="#">Soporte</a></li>
+	    <center>
+	    <button class="btn btn-link" data-toggle="modal" data-target="#myModal"></li>
+	     Soporte 
+	    </button>
+	    </center>
           </ul>
-       </li>
-     
+        </li>    
         </ul>
       </div>
     </div>
   </div>
-</div>
- 
+</div> 
 <p class='notice'><% notice%></p>
 <p class='alert'><% alert%></p>
 
@@ -86,6 +87,28 @@
 <%end%>
 
 <!--HASTA AQUI CUENTA DE USUARIO-->
+
+<!--SOPORTE-MODAL-->
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Soporte</h4>
+      </div>
+      <div class="modal-body">
+	¿Reporte de infracciones o problemas no solucionados?<br>
+        Contáctenos: <b>hungrymaps@gmail.com</b>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--HASTA AQUÍ SOPORTE-MODAL-->
 
 <body style="background-color:#CAF078;">
 <center>

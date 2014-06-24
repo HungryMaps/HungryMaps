@@ -124,7 +124,7 @@
         <td><%= restaurante.telefono %></td>
         <td><%= restaurante.ubicacion.provincia+" "+restaurante.ubicacion.canton %></td>
 	<% if user_signed_in? %> 
-        <td><%= button_to 'Like', upvote_restaurante_path(restaurante), method: :post %><%= pluralize(restaurante.votes.count, "Like") %></td> 
+        	<td><%= button_to 'Like', upvote_restaurante_path(restaurante), method: :post %><%= pluralize(restaurante.votes.count, "Like") %></td> 
     	<% end %>
       </tr>
     <% end %>

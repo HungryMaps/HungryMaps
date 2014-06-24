@@ -94,14 +94,6 @@
 <h1>Estado de Orden</h1>
 <br>
 
-<style type="text/css">
-.myTable { background-color:#eee;border-collapse:collapse; }
-.myTable th { background-color:#45A91A;color:white;width:50%; }
-.myTable td, .myTable th { text-align:center; padding:5px;border:1px solid #000; }
-</style>
-
-<table class="myTable" style="width:700px">
-
 <table>
   <thead>
     <tr>

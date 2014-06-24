@@ -1,6 +1,6 @@
 <center>
 <br>
-<h1 style="color:green;">Nuevo Restaurante</h1>
+<h1 style="color:green;">Nuevo Platillo</h1>
 
 <%= form_for(@producto) do |f| %>
   <% if @producto.errors.any? %>
