@@ -11,4 +11,9 @@ class ModelMailer < ActionMailer::Base
     mail to: current_user.email , subject: "Orden con HungryMaps"
   end
 
+  def email_to_admin(orden, user)
+  	@orden = orden
+        mail to: user.email , subject: "Solicitud de Orden con HungryMaps"
+  end
+
 end

@@ -1,0 +1,23 @@
+<h1>¡Gracias por ordenar con Hungry Maps!</h1>
+
+<p>
+
+Ordenó en el Restaurante: <%= @orden.restaurante.nombre_restaurante %>
+
+</p>
+
+<br>
+
+<p>
+
+Los productos que ordenó: <%= @orden.productos %>
+
+</p>
+<br>
+
+<p>
+Y el total de la orden es: <%= @orden.precio %>
+
+</p>
+
+<h2>¡Provecho!</h2>

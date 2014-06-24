@@ -40,15 +40,22 @@
 </p>
 
 <p>
-  <strong>Menu:</strong>
-  <%= link_to 'Vea El Menu', rest_menu_path%>
+  <strong><%= link_to 'Ver el Menú', rest_menu_path%></strong>
 </p>
 
 <p>
+<% if user_signed_in? %>  
   <% if current_user.id == @restaurante.user.id %>
-	<%= link_to 'Solicitudes de Ordenes', solicitudes_path %>
+        <strong> Opciones de Administrador </strong> <br>
+	<%= link_to 'Solicitudes de Ordenes', solicitudes_path %> <br>
+       	<%= link_to 'Editar Restaurante', edit_restaurante_path %> <br>
+       	<%= link_to 'Eliminar', @restaurante, method: :delete, data: { confirm: '¿Está seguro de que desea eliminar este restaurante?' } %> 
   <% end %>
+<% end %>
 </p>
+
+<br>
+<br>
 
 <%= link_to 'Volver', restaurantes_path %>
 

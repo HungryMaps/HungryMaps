@@ -5,4 +5,5 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   has_one :restaurante
   has_many :ordens
+  has_one :vote
 end

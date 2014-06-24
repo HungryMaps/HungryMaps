@@ -120,14 +120,14 @@
 
     	<% if user_signed_in? %> 
 		<% if current_user.id == orden.user_id %>
-			<tr>
+		      <tr>
 			<td><%= orden.restaurante.nombre_restaurante %></td>
 			<td><%= orden.productos %></td>
 			<td><%= orden.precio %></td>
 			<td><%= orden.descripcion %></td>
 			<td><%= orden.fecha %></td>
 			<td><%= orden.estado.estado %></td>
-			</tr>     
+		      </tr>     
 		<%end%>
        <% end %>
     <% end %>
@@ -137,3 +137,4 @@
 <br>
 
 </center>
+</body>

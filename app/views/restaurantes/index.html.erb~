@@ -104,12 +104,8 @@
     <tr>
       <th>Nombre restaurante</th>
       <th>Telefono</th>
-      <th>Correo electronico</th>
-      <th>Fax</th>
-      <th>Señas</th>
-      <th></th>
-      <th></th>
-      <th colspan="3"></th>
+      <th>Direccion</th>
+      <th colspan="1"></th>
     </tr>
   </thead>
 
@@ -126,22 +122,10 @@
       <tr>
         <td><%= link_to restaurante.nombre_restaurante, restaurante %></td>
         <td><%= restaurante.telefono %></td>
-        <td><%= restaurante.correo_electronico %></td>
-        <td><%= restaurante.fax %></td>
-        <td><%= restaurante.señas %></td>
-   <td><%= button_to 'Like', upvote_restaurante_path(restaurante), method: :post %><%= pluralize(restaurante.votes.count, "Like") %></td> 
-   <td><%= button_to 'Dislike', dislike_restaurante_path(restaurante), method: :poste %><%= pluralize(restaurante.votes.count, "dislike") %></td>     
-       
-  
-	
+        <td><%= restaurante.ubicacion.provincia+" "+restaurante.ubicacion.canton %></td>
 	<% if user_signed_in? %> 
-		<% if current_user.id == restaurante.user_id %>
-			<td><%= link_to 'Editar Menú', rest_menu_path(restaurante) %></td>
-       			<td><%= link_to 'Editar Restaurante', edit_restaurante_path(restaurante) %></td>
-       			<td><%= link_to 'Eliminar', restaurante, method: :delete, data: { confirm: '¿Está seguro de que desea eliminar este restaurante?' } %></td>
-		<% end %>
-        <% end %>
-
+        <td><%= button_to 'Like', upvote_restaurante_path(restaurante), method: :post %><%= pluralize(restaurante.votes.count, "Like") %></td> 
+    	<% end %>
       </tr>
     <% end %>
   </tbody>
@@ -149,10 +133,12 @@
 
 <br>
 <% if user_signed_in? %>   
+	<strong> 
 	<% if current_user.tipo == "1"%>
     		<%= link_to 'Nuevo Restaurante', new_restaurante_path %>
 	<% end %>
-	<%= link_to 'Sus Ordenes', ordens_path %>
+	<br>
+	<%= link_to 'Sus Ordenes', ordens_path %> </strong>
 <% end %>
 
 </center>

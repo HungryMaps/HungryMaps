@@ -27,16 +27,19 @@ class RestaurantesController < ApplicationController
 
 ##votos
 def upvote
-  @restaurantes = Restaurante.find(params[:id])
-  @restaurantes.votes.create
+  @restaurante = Restaurante.find(params[:id])
+  num = @restaurante.votes.where(user_id: current_user.id).count
+  if num == 0
+    @restaurante.votes.create(user_id: current_user.id)
+  end
   redirect_to(restaurantes_path)
 end
 ###
 
 ##votos
 def dislike
-  @restaurantes = Restaurante.find(params[:id])
-  @restaurantes.votes.create
+  @restaurante = Restaurante.find(params[:id])
+  @restaurante.votes.create
   redirect_to(restaurantes_path)
 end
 ###
@@ -93,6 +96,7 @@ end
 		@orden.estado_id = 2
 		@orden.save 
          	ModelMailer.new_record_notification(@orden, current_user).deliver
+		ModelMailer.email_to_admin(@orden, @restaurante.user.email).deliver
 
 	end	
 	redirect_to(restaurantes_path)

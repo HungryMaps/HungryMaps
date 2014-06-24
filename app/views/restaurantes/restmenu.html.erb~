@@ -42,12 +42,14 @@
 <br>
 
 <p>
+  <strong>
   <% if user_signed_in? %> 
 	<% if current_user.id == @restaurante.user_id %>
-		<%= link_to 'Agregar Platillo', platillo_path%>
+		<%= link_to 'Agregar Platillo', platillo_path%> <br>
 	<% end %>
   <% end %>
-  <%= link_to 'Ordenar en este restaurante', orden_path%>
+  <%= link_to 'Ordenar en este restaurante', carrito_path%>
+  </strong>
 </p>
 
 <br>
