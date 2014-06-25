@@ -128,6 +128,8 @@
       <th>Nombre restaurante</th>
       <th>Telefono</th>
       <th>Direccion</th>
+      <th>Likes</th>
+      <th>Comentarios</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -148,6 +150,8 @@
         <td><%= restaurante.ubicacion.provincia+" "+restaurante.ubicacion.canton %></td>
 	<td>	
 	<% if user_signed_in? %> 
+                <%= pluralize(restaurante.votes.count, "Like") %>
+                <br>
 		<% num = restaurante.votes.where(user_id: current_user.id).count %>
 		<% if num == 0 %>
 			<%= button_to 'Like', upvote_restaurante_path(restaurante), method: :post %>
@@ -155,8 +159,9 @@
 			<%= button_to 'Dislike', dislike_restaurante_path(restaurante), method: :post %>
     		<% end %>
     	<% end %>
-	<%= pluralize(restaurante.votes.count, "Like") %></td> 
-	<td> <%= link_to "Comentarios", comentario_path(restaurante) %> <td>
+	</td> 
+	
+        <td> <%= button_to 'Comentarios', comentario_path(restaurante) %> <td>
       </tr>
     <% end %>
   </tbody>
