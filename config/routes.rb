@@ -18,8 +18,9 @@ Rails.application.routes.draw do
   resources :restaurantes do
     member do
       post 'upvote'
+      post 'dislike'
     end
-end
+  end
 
   get '/restaurantes/:id/menu' => 'restaurantes#restmenu', as: 'rest_menu'  
 	

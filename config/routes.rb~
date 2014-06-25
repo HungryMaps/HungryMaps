@@ -18,7 +18,6 @@ Rails.application.routes.draw do
   resources :restaurantes do
     member do
       post 'upvote'
-      poste 'dislike'
     end
 end
 
