@@ -1,3 +1,4 @@
+
 <!-- CUENTA DE USUARIO-->
 <% if user_signed_in? %>
 <body>
@@ -110,66 +111,26 @@
 
 <!--HASTA AQUÍ SOPORTE-MODAL-->
 
-<body style="background-color:#CAF078;">
+<br>
 <center>
-<br>
-<br>
-<h1>Lista de Restaurantes</h1>
-<br>
-<style type="text/css">
-.myTable { background-color:#eee;border-collapse:collapse; }
-.myTable th { background-color:#45A91A;color:white;width:50%; }
-.myTable td, .myTable th { text-align:center; padding:5px;border:1px solid #000; }
-</style>
 
-<table class="myTable" style="width:700px">
-  <thead>
-    <tr>
-      <th>Nombre restaurante</th>
-      <th>Telefono</th>
-      <th>Direccion</th>
-      <th colspan="2"></th>
-    </tr>
-  </thead>
+<p id="notice"><%= notice %></p>
 
-  <tbody>
-  
-  <%= form_tag(restaurantes_path, :method => :get) do %>
+<h1 style="color:green;">Comentarios</h1>
 
-    <%= text_field_tag "searchbox", params[:searchbox] %>
-
-    <%= submit_tag "Buscar", :nombre_restaurante => nil %>
-
-<% end %>
-    <% @restaurantes.each do |restaurante| %>
-      <tr>
-        <td><%= link_to restaurante.nombre_restaurante, restaurante %></td>
-        <td><%= restaurante.telefono %></td>
-        <td><%= restaurante.ubicacion.provincia+" "+restaurante.ubicacion.canton %></td>
-	<td>	
-	<% if user_signed_in? %> 
-		<% num = restaurante.votes.where(user_id: current_user.id).count %>
-		<% if num == 0 %>
-			<%= button_to 'Like', upvote_restaurante_path(restaurante), method: :post %>
-		<% else %>
-			<%= button_to 'Dislike', dislike_restaurante_path(restaurante), method: :post %>
-    		<% end %>
-    	<% end %>
-	<%= pluralize(restaurante.votes.count, "Like") %></td> 
-	<td> <%= link_to "Comentarios", comentario_path(restaurante) %> <td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-<% if user_signed_in? %>   
-	<strong> 
-	<% if current_user.tipo == "1"%>
-    		<%= link_to 'Nuevo Restaurante', new_restaurante_path %>
-	<% end %>
-	<br>
-	<%= link_to 'Sus Ordenes', ordens_path %> </strong>
+<%= form_tag(comentario_agregar_path, :method => "post") do %>
+    <%= text_area_tag :comentario, "Comente sobre su experiencia en el restaurante!!!" %>
+    <%= submit_tag "Agregar Comentario" %>
 <% end %>
 
+<% @restaurante.opinions.each do |c| %>
+<%= c.user.email %> 
+<div style="width:500px;height:100px;border:1px solid #000;margin:5px;"> <%= c.comentario %> </div>
+<br>
+<% end %>
+
+<br>
+<br>
+
+<%= link_to 'Volver', @restaurante %> 
 </center>

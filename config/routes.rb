@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
  
+  resources :opinions
+
   resources :estados
 
   resources :ordens
@@ -35,6 +37,10 @@ Rails.application.routes.draw do
   post '/restaurantes/:id/agregar' => 'restaurantes#agregar', as: 'agregar'
 
   get '/restaurantes/:id/solicitud' => 'restaurantes#solicitud', as: 'solicitudes'
+
+  get '/restaurantes/:id/comentarios' => 'restaurantes#comentario', as: 'comentario'
+
+  post '/restaurantes/:id/comentarios' => 'restaurantes#comentario', as: 'comentario_agregar'
 
   get '/' => 'homes#index', as: 'indice' 
 

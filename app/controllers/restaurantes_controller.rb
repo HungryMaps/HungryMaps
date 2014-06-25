@@ -1,5 +1,5 @@
 class RestaurantesController < ApplicationController
-  before_action :set_restaurante, only: [:show, :edit, :update, :destroy, :restmenu, :carrito, :platillo, :platillo_edit, :agregar, :solicitud]
+  before_action :set_restaurante, only: [:show, :edit, :update, :destroy, :restmenu, :carrito, :platillo, :platillo_edit, :agregar, :solicitud, :comentario]
   before_action :authenticate_user!, only: [:carrito, :edit, :update, :destroy, :new]
   before_action
 
@@ -16,6 +16,12 @@ class RestaurantesController < ApplicationController
     end
   end
 
+  def comentario
+    if(params[:comentario] != nil)
+	 @restaurante.opinions.create(user_id: current_user.id, comentario: params[:comentario])
+    end
+  end
+
   def solicitud
     @ordens = Orden.all 
   end
@@ -25,26 +31,21 @@ class RestaurantesController < ApplicationController
      render 'platillo'
   end
 
-##votos
-def upvote
-  @restaurante = Restaurante.find(params[:id])
-  @restaurante.votes.create(user_id: current_user.id)
-  redirect_to(restaurantes_path)
-end
-###
-
-##votos
-def dislike
-  @restaurante = Restaurante.find(params[:id])
-  @restaurante.votes.each do |v|
-  	if v.user_id == current_user.id
-		v.destroy  	
-	end
+  def upvote
+    @restaurante = Restaurante.find(params[:id])
+    @restaurante.votes.create(user_id: current_user.id)
+    redirect_to(restaurantes_path)
   end
-  redirect_to(restaurantes_path)
-end
-###
 
+  def dislike
+    @restaurante = Restaurante.find(params[:id])
+    @restaurante.votes.each do |v|
+  	  if v.user_id == current_user.id
+	        v.destroy  	
+	  end
+    end
+    redirect_to(restaurantes_path)
+  end
 
   def platillo
      @producto = Producto.new

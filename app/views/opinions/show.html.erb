@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Restaurante:</strong>
+  <%= @opinion.restaurante_id %>
+</p>
+
+<p>
+  <strong>Comentario:</strong>
+  <%= @opinion.comentario %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @opinion.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_opinion_path(@opinion) %> |
+<%= link_to 'Back', opinions_path %>

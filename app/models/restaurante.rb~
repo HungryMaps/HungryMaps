@@ -4,6 +4,7 @@ class Restaurante < ActiveRecord::Base
   belongs_to :tipo_comida
   belongs_to :ubicacion
   belongs_to :user
+  has_many :votes, dependent: :destroy
   validates_presence_of :nombre_restaurante, message: "Indique un nombre"
   validates_presence_of :telefono, message: "Indique un telefono para el restaurante"
   validates_presence_of :correo_electronico, message: "Indique un email para el restaurante"

@@ -6,5 +6,4 @@ class User < ActiveRecord::Base
   has_one :restaurante
   has_many :ordens
   has_one :vote
-  validate :vote, uniqueness: true
 end
