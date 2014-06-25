@@ -15,3 +15,34 @@
  *= require_tree .
  *= require_self
  */
+
+nav ul{
+   width: 450px;
+   margin: 0px auto 0px auto;
+}
+nav li{
+   float: left;
+   width: 120px;
+   height: 20px;
+   list-style: none;
+   border: solid 1px #999;
+   margin-right: 10px;
+   background-repeat: no-repeat;
+   -moz-border-radius: 5px 15px 5px 5px;
+   -webkit-border-radius: 5px 15px 5px 5px;
+   text-align: center;
+}
+nav .google_mas {
+   background-image: url(/assets/google_mas_icono.jpg);
+}
+nav .facebook {
+   background-image: url(/assets/facebook_icono.jpg);
+}
+nav .twitter {
+   background-image: url(/assets/twitter_icono.jpg);
+}
+nav a {
+   font-weight: bold;
+   color: #000;
+   text-decoration: none;
+}

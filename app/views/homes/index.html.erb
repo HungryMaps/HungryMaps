@@ -169,6 +169,7 @@ var ns4class=''
 <p>&nbsp;</p>
 </h1>
 <h style="text-align:center">
+
 <center>
 <table border="0" width=198>
   <tr>
@@ -184,6 +185,28 @@ var ns4class=''
   </tr>
 
 </table>
+
+<body>
+
+<div id="contenedor">
+   <header>
+      <h2> Búscanos en: </h2>
+   </header>
+   <nav>
+      <ul>
+         <li class="facebook"> <%= link_to "Facebook", "http://es.wikipedia.org/wiki/Google%2B", :target => "_blank" %> </li>
+         <li class="google_mas"> <%= link_to "Google +", "http://es.wikipedia.org/wiki/Google%2B", :target => "_blank" %> </li>
+         <li class="twitter"> <%= link_to "Twitter", "http://es.wikipedia.org/wiki/Google%2B", :target => "_blank" %> </li>
+      </ul>
+      <div class="clear"></div>
+   </nav> 
+   <section>
+   <%= yield %>
+   </section> 
+</div>
+
+</body>
+
 </center>
 </h> 
 
