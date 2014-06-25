@@ -191,14 +191,12 @@ var ns4class=''
 <div id="contenedor">
    <header>
       <h2> Búscanos en: </h2>
-<tr>
-<tr>
    </header>
    <nav>
       <ul>
-         <li class="google_mas"> <%= link_to "Google +", "http://es.wikipedia.org/wiki/Google%2B", :target => "_blank" %> </li>
-         <li class="facebook"> <%= link_to "Google +", "http://es.wikipedia.org/wiki/Google%2B", :target => "_blank" %> </li>
-         <li class="twitter"> <%= link_to "Google +", "http://es.wikipedia.org/wiki/Google%2B", :target => "_blank" %> </li>
+         <li class="facebook"> <%= link_to "Facebook", "https://www.facebook.com/HungryMaps", :target => "_blank" %> </li>
+         <li class="google_mas"> <%= link_to "Google +", "https://www.facebook.com/HungryMaps", :target => "_blank" %> </li>
+         <li class="twitter"> <%= link_to "Twitter", "https://twitter.com/HungryMaps", :target => "_blank" %> </li>
       </ul>
       <div class="clear"></div>
    </nav> 
