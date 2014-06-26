@@ -38,10 +38,6 @@ Rails.application.routes.draw do
 
   get '/restaurantes/:id/solicitud' => 'restaurantes#solicitud', as: 'solicitudes'
 
-  get '/restaurantes/:id/comentarios' => 'restaurantes#comentario', as: 'comentario'
-
-  post '/restaurantes/:id/comentarios' => 'restaurantes#comentario', as: 'comentario_agregar'
-
   get '/' => 'homes#index', as: 'indice' 
 
   # The priority is based upon order of creation: first created -> highest priority.

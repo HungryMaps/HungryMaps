@@ -4,13 +4,7 @@ Rails.application.routes.draw do
 
   resources :estados
 
-  resources :ordens do
-    collection do
-     get :paid
-     get :revoked
-     post :ipn
-   end
-  end
+  resources :ordens
 
   devise_for :users
   resources :homes
@@ -29,7 +23,6 @@ Rails.application.routes.draw do
       post 'dislike'
     end
   end
-
 
   get '/restaurantes/:id/menu' => 'restaurantes#restmenu', as: 'rest_menu'  
 	
@@ -50,8 +43,6 @@ Rails.application.routes.draw do
   post '/restaurantes/:id/comentarios' => 'restaurantes#comentario', as: 'comentario_agregar'
 
   get '/' => 'homes#index', as: 'indice' 
-
-
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
