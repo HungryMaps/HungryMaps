@@ -41,6 +41,7 @@
     <tr>
       <th>Producto</th>
       <th>Precio</th>
+      <th>Detalles del pedido</th>
     </tr>
   </thead>
   <tbody>
@@ -48,12 +49,14 @@
      <tr>	
 	<td> <%= @orden.productos %> </td>
 	<td> <%= @orden.precio %> </td>
+	<td> <%= @orden.descripcion %> </td>
      </tr>
   </tbody>
 </table> 
 
 <br>
 
+<%= link_to "PAGAR", @restaurante.paypal_url %>
 <%= button_to "Confirmar", agregar_path(cancelar: 0), method: :post%>
 <%= button_to "Cancelar", agregar_path(cancelar: 1), method: :post%>
 

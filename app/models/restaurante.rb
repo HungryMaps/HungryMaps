@@ -22,4 +22,25 @@ def self.search(search)
   end
 
 end
+
+def paypal_url
+
+  values = {
+   :busines => 'jmarchena93-facilitator@gmail.com',
+   :cmd => '_cart',
+   :upload => 1,
+   :return => 'http://localhost:3000/restaurantes',
+   :involve => id
+  }
+
+  productos.each_with_index do |item, index|
+    values.merge!({
+      "amount_#{index+1}" => item.precio,
+      "item_name_#{index+1}" => item.nombre_producto,
+      "item_number_#{index+1}" => item.id
+    })
+
+   end
+   "https://www.sandbox.paypal.com/cr/cgi-bin/webscr?+values.map {|k,v| "#{k}=#{v}"}.join("&") 
+  end
 end
