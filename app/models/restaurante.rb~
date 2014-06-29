@@ -26,10 +26,10 @@ end
 def paypal_url
 
   values = {
-   :busines => 'jmarchena93-facilitator@gmail.com',
+   :business => 'jmarchena93-facilitator@gmail.com',
    :cmd => '_cart',
    :upload => 1,
-   #:return => retunr_url,
+   :return => 'http://localhost:3000/restaurantes',
    :involve => id
   }
 
@@ -41,6 +41,7 @@ def paypal_url
     })
 
    end
-   "https://www.sandbox.paypal.com/cr/cgi-bin/webscr?+values.map {|k,v| "#{k}=#{v}"}.join("&") 
+   
+   "https://www.sandbox.paypal.com/cr/cgi-bin/webscr?"+ values.map {|k,v| "#{k}=#{v}"}.join("&") 
   end
 end
