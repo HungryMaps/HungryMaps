@@ -194,9 +194,19 @@ var ns4class=''
    </header>
    <nav>
       <ul>
-         <li class="facebook"> <%= link_to "Facebook", "https://www.facebook.com/HungryMaps", :target => "_blank" %> </li>
-         <li class="google_mas"> <%= link_to "Google +", "https://www.facebook.com/HungryMaps", :target => "_blank" %> </li>
-         <li class="twitter"> <%= link_to "Twitter", "https://twitter.com/HungryMaps", :target => "_blank" %> </li>
+
+
+         <li class="facebook"> <%= link_to "Facebook", "https://www.facebook.com/HungryMaps", :target => "_blank" %> 
+          <%= link_to "Facebook", "https://www.facebook.com/HungryMaps",image_tag "face.jpeg", :alt => "Facebook", :title => "Facebook"%></li>
+
+
+         <li class="google_mas"> <%= link_to "Google +", "https://www.facebook.com/HungryMaps", :target => "_blank" %> 
+         <%= image_tag "google_mas_logo.jpg", :alt => "Google +", :title => "Google +"%></li>
+
+        
+         <li class="twitter"> <%= link_to "Twitter", "https://twitter.com/HungryMaps", :target => "_blank" %> 
+         <%= image_tag "twitter.jpeg", :alt => "Twitter", :title => "Twitter"%></li>
+         
       </ul>
       <div class="clear"></div>
    </nav> 

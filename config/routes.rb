@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 
   resources :tipo_comidas
 
-  resources :productos
+  resources :productos 
 
   resources :restaurantes do
     member do

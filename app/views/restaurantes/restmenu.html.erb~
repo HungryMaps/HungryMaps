@@ -27,6 +27,7 @@
         <td>  <%= m.nombre_producto %></td>
         <td><%= m.precio %> </td>
 	<td><%= m.tipo_producto.tipo_producto %> </td>
+
 	<% if user_signed_in? %> 
 		<% if current_user.id == @restaurante.user_id %>
 			<td><%= link_to 'Editar', platillo_edit_path(foo_param: m.id) %></td>
@@ -38,7 +39,6 @@
   </tbody>
 </table>
 
-<br>
 <br>
 
 <p>
@@ -56,4 +56,7 @@
 <br>
 
 <%= link_to 'Volver', @restaurante %> 
+<br>
+<br>
+<%= link_to 'Home', indice_path %> 
 </center>
