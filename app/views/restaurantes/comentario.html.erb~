@@ -149,5 +149,5 @@
 <br>
 <br>
 
-<%= button_to 'Volver', :@restaurante %> 
+<%= link_to 'Volver', @restaurante %> 
 </center>

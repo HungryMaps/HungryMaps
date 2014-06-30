@@ -81,5 +81,5 @@
 
 <%= link_to 'Volver', @restaurante %> 
 <br>
-<%=  button_to 'home', indice_path %>
+<%= link_to 'home', indice_path %>
 </center>

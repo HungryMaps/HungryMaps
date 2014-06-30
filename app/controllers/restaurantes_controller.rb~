@@ -19,7 +19,7 @@ class RestaurantesController < ApplicationController
   def comentario
     if(params[:comentario] != nil)
 	 @restaurante.opinions.create(user_id: current_user.id, comentario: params[:comentario])
-    else
+    end
   end
 
   def solicitud
@@ -94,14 +94,29 @@ class RestaurantesController < ApplicationController
         end
 	if(params[:cancelar]=="1")
 		@orden.destroy
+		redirect_to(restaurantes_path)
 	else
 		@orden.estado_id = 2
 		@orden.save 
-         	ModelMailer.new_record_notification(@orden, current_user).deliver
-		ModelMailer.email_to_admin(@orden, @restaurante.user).deliver
+         	#ModelMailer.new_record_notification(@orden, current_user).deliver
+		#ModelMailer.email_to_admin(@orden, @restaurante.user).deliver
+		 values = {
+		   :business => 'jmarchena93-facilitator@gmail.com',
+		   :cmd => '_cart',
+		   :upload => 1,
+		   :return => 'http://localhost:3000/restaurantes',
+		   :involve => @restaurante.id
+		  }
+
+		    values.merge!({
+		      "amount_1" => @orden.precio,
+		      "item_name_1" => @orden.productos,
+		      "item_number_1" => @orden.id
+		    })
+   
+ 		 redirect_to URI.encode("https://www.sandbox.paypal.com/cr/cgi-bin/webscr?"+ values.map {|k,v| "#{k}=#{v}"}.join("&")) 
 
 	end	
-	redirect_to(restaurantes_path)
   end
 
   # GET /restaurantes/1

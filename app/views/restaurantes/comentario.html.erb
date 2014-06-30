@@ -129,12 +129,14 @@
 <p id="notice"><%= notice %></p>
 
 
-
-<%= form_tag(comentario_agregar_path, :method => "post") do %>
-    <%= text_area_tag :comentario, "Comente sobre su experiencia en el restaurante!!!" %>
-    <br>
-    <%= submit_tag "Comentar" %>
+<% if user_signed_in? %>  
+	<%= form_tag(comentario_agregar_path, :method => "post") do %>
+	    <%= text_area_tag :comentario, "Comente sobre su experiencia en el restaurante!!!" %>
+	    <br>
+	    <%= submit_tag "Comentar" %>
+	<% end %>
 <% end %>
+
 <br>
 <br>
 <% @restaurante.opinions.each do |c| %>
