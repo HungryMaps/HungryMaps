@@ -16,8 +16,8 @@
 <% 	k += 1 %>
 <% end %>
 
-<%= form_tag(cambio_path(orden.id => params[:ident]), :method => "post") do %>
-  <%= select_tag(:status, options_for_select(a)) %>
+<%= form_for(@orden) do |f|%>
+  <%= f.select(:estado_id, options_for_select(a)) %>
   <%= submit_tag "Cambiar Estado"%>
 <% end %>
 

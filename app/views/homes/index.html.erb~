@@ -197,7 +197,7 @@ var ns4class=''
 
 
          <li class="facebook"> <%= link_to "Facebook", "https://www.facebook.com/HungryMaps", :target => "_blank" %> 
-          <%= link_to "Facebook", "https://www.facebook.com/HungryMaps",image_tag "face.jpeg", :alt => "Facebook", :title => "Facebook"%></li>
+          <%= image_tag "face.jpeg", :alt => "Facebook", :title => "Facebook"%></li>
 
 
          <li class="google_mas"> <%= link_to "Google +", "https://www.facebook.com/HungryMaps", :target => "_blank" %> 

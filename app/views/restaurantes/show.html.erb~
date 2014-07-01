@@ -44,10 +44,9 @@
 </p>
 
 <p>
-
-<strong> Opciones de Administrador </strong> <br>
 <% if user_signed_in? %>  
   <% if current_user.id == @restaurante.user.id %>
+        <strong> Opciones de Administrador </strong> <br>
 	<%= link_to 'Solicitudes de Ordenes', solicitudes_path %> <br>
        	<%= link_to 'Editar Restaurante', edit_restaurante_path %> <br>
        	<%= link_to 'Eliminar', @restaurante, method: :delete, data: { confirm: '¿Está seguro de que desea eliminar este restaurante?' } %> 

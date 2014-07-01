@@ -1,5 +1,8 @@
-<h1>New tipo_comida</h1>
+<center>
+<br>
+<h1 style="color:green;">Nuevo Tipo de Comida</h1>
 
 <%= render 'form' %>
 
 <%= link_to 'Back', tipo_comidas_path %>
+</center>
