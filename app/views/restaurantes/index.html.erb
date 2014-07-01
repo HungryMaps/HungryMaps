@@ -148,10 +148,8 @@
         <td><%= link_to restaurante.nombre_restaurante, restaurante %></td>
         <td><%= restaurante.telefono %></td>
         <td><%= restaurante.ubicacion.provincia+" "+restaurante.ubicacion.canton %></td>
-	<td>	
+	<td><%= pluralize(restaurante.votes.count, "Like") %>
 	<% if user_signed_in? %> 
-                <%= pluralize(restaurante.votes.count, "Like") %>
-                <br>
 		<% num = restaurante.votes.where(user_id: current_user.id).count %>
 		<% if num == 0 %>
 			<%= button_to 'Like', upvote_restaurante_path(restaurante), method: :post %>

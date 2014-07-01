@@ -138,7 +138,7 @@
 				<%      a[k] = b %>
 				<% 	k += 1 %>
 				<% end %>
-				<% session[:return_to] ||= request.referer %>
+				
 				<%= form_for(orden) do |f|%>
 				  <%= f.select(:estado_id, options_for_select(a)) %>
 				  <%= submit_tag "Cambiar Estado"%>
@@ -152,5 +152,5 @@
 </table>
 
 <br>
-
+<%= link_to 'Volver', @restaurante%>
 </center>
