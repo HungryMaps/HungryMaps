@@ -152,5 +152,5 @@
 </table>
 
 <br>
-<%= link_to 'Volver', @restaurante%>
+<%= link_to 'Volver', @restaurante %>
 </center>

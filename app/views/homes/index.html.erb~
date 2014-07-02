@@ -98,8 +98,8 @@
         <h4 class="modal-title" id="myModalLabel">Soporte</h4>
       </div>
       <div class="modal-body">
-	¿Reporte de infracciones o problemas no solucionados?<br>
-        Contáctenos: <b>hungrymaps@gmail.com</b>
+	¿Reporte de infracciones o problemas no solucionados? Contáctenos: <b>hungrymaps@gmail.com</b>
+	<%= link_to "Facebook", "https://www.facebook.com/HungryMaps", :target => "_blank" %>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
@@ -188,6 +188,7 @@ var ns4class=''
 
 <body>
 
+<center>
 <div id="contenedor">
    <header>
       <h2> Búscanos en: </h2>
@@ -214,6 +215,7 @@ var ns4class=''
    <%= yield %>
    </section> 
 </div>
+</center>
 
 </body>
 

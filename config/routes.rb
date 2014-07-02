@@ -1,5 +1,19 @@
 Rails.application.routes.draw do
  
+  get 'user/new'
+
+  get 'user/create'
+
+  get 'user/show'
+
+  get 'user/edit'
+
+  get 'user/update'
+
+  get 'user/destroy'
+
+  get 'user/index'
+
   resources :opinions
 
   resources :estados

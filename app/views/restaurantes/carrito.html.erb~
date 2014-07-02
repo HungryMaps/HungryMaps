@@ -110,8 +110,6 @@
 
 <!--HASTA AQUÍ SOPORTE-MODAL-->
 
-<br>
-
 <body style="background-color:#CAF078;">
 <center>
 <br>
@@ -192,6 +190,4 @@
 <br>
 
 <%= link_to 'Volver', @restaurante %> 
-<br>
-<%= link_to 'home', indice_path %>
-</center>
+

@@ -168,7 +168,4 @@
 <br>
 
 <%= link_to 'Volver', @restaurante %> 
-<br>
-<br>
-<%= link_to 'Home', indice_path %> 
-</center>
+

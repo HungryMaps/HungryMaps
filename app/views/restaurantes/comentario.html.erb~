@@ -99,8 +99,9 @@
         <h4 class="modal-title" id="myModalLabel">Soporte</h4>
       </div>
       <div class="modal-body">
-	¿Reporte de infracciones o problemas no solucionados?<br>
-        Contáctenos: <b>hungrymaps@gmail.com</b>
+	¿Reporte de infracciones o problemas no solucionados? Contáctenos: <b>hungrymaps@gmail.com</b>
+	<%= link_to "Facebook", "https://www.facebook.com/HungryMaps", :target => "_blank" %>
+	<%= link_to "Twitter", "https://twitter.com/HungryMaps", :target => "_blank" %>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
@@ -129,12 +130,14 @@
 <p id="notice"><%= notice %></p>
 
 
-
-<%= form_tag(comentario_agregar_path, :method => "post") do %>
-    <%= text_area_tag :comentario, "Comente sobre su experiencia en el restaurante!!!" %>
-    <br>
-    <%= submit_tag "Comentar" %>
+<% if user_signed_in? %>  
+	<%= form_tag(comentario_agregar_path, :method => "post") do %>
+	    <%= text_area_tag :comentario, "Comente sobre su experiencia en el restaurante!!!" %>
+	    <br>
+	    <%= submit_tag "Comentar" %>
+	<% end %>
 <% end %>
+
 <br>
 <br>
 <% @restaurante.opinions.each do |c| %>
