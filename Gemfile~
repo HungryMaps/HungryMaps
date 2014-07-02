@@ -31,7 +31,13 @@ gem 'spring',        group: :development
 gem 'bootstrap-sass', '~> 2.3.1.0'
 
 group :development, :test do
- gem 'rspec-rails'
+  gem 'sqlite3'
+  gem 'rspec-rails'
+end
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
 end
 
 # Use ActiveModel has_secure_password

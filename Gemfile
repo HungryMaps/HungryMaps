@@ -7,7 +7,7 @@ gem 'rails', '4.1.0'
 
 #Uso de gema para el Autentificacion de usuarios
 gem 'devise'
-gem 'sqlite3'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
